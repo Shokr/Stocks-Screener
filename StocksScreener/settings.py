@@ -70,8 +70,8 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    # "crispy_forms",
-    # "widget_tweaks",
+    "crispy_forms",
+    "widget_tweaks",
 
     "rest_framework",
     "corsheaders",

@@ -1,4 +1,4 @@
-#!/home/muhammed/PycharmProjects/StocksScreener/venv/bin/python
+#!/home/muhammed/PycharmProjects/Stocks-Screener/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
