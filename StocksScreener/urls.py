@@ -29,6 +29,8 @@ admin.autodiscover()
 
 
 urlpatterns = [
+    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
+
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
@@ -59,16 +61,16 @@ if settings.DEBUG:
         ),
         path("500/", default_views.server_error),
     ]
-#
-# if settings.DEBUG:
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-#
-# if settings.DEBUG:
-#     import debug_toolbar
-#
-#     urlpatterns += [
-#         path('__debug__/', include(debug_toolbar.urls)),
-#     ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ]
 ######################################################################
 admin.site.site_header = "Stocks-Screener"
 admin.site.site_title = "Stocks Screener"

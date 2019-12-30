@@ -1,0 +1,17 @@
+{% extends "rest_framework/base.html" %}
+
+# Override blocks with required customizations
+
+{% block bootstrap_theme %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/darkly/bootstrap.min.css" type="text/css">
+{% endblock %}
+
+{% block bootstrap_navbar_variant %}{% endblock %}
+
+{% block bootstrap_breadcrumbs %}{% endblock %}
+
+{% block bootstrap_title %}Stocks-Screener{% endblock %}
+
+{% block branding %}
+    <h3 style="margin: 0 0 20px;">Stocks Market Screener</h3>
+{% endblock %}
