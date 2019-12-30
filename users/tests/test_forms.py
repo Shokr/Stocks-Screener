@@ -13,7 +13,7 @@ class TestUserForm:
 
         form = UserForm(
             {
-                "user_name": proto_user.username,
+                "username": proto_user.username,
                 "email": proto_user.email,
                 "mobile": proto_user.mobile,
                 "password": proto_user._password,
@@ -30,7 +30,7 @@ class TestUserForm:
         # hence cannot be created.
         form = UserForm(
             {
-                "user_name": proto_user.username,
+                "username": proto_user.username,
                 "email": proto_user.email,
                 "mobile": proto_user.mobile,
                 "password": proto_user._password,

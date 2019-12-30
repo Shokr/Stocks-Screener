@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import User
+from .models import *
 
 
 class UserForm(forms.ModelForm):

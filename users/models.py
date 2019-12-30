@@ -5,11 +5,11 @@ from django.core.validators import RegexValidator
 from django.db.models import *
 from django.urls import reverse
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, user_name, password=None):
+    def create_user(self, email, username, password=None):
         """
         Creates and saves a User with the given email, national_id and password.
         """
@@ -18,21 +18,21 @@ class UserManager(BaseUserManager):
 
         user = self.model(
             email=self.normalize_email(email),
-            user_name=user_name,
+            username=username,
         )
 
         user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, user_name, password):
+    def create_superuser(self, email, username, password):
         """
         Creates and saves a superuser with the given email, national_id and password.
         """
         user = self.create_user(
             email,
             password=password,
-            user_name=user_name,
+            username=username,
         )
         user.is_admin = True
         user.save(using=self._db)
@@ -41,7 +41,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser):
     guid = CharField(db_column='GUID', max_length=45, default=uuid.uuid1, editable=False)
-    user_name = CharField(_("User"), db_column='UserName', max_length=255, unique=True, db_index=True)
+    username = CharField(db_column='UserName', max_length=25, unique=True, db_index=True, verbose_name="User Name")
     first_name = CharField(db_column='FirstName', max_length=45, blank=True, null=True)
     last_name = CharField(db_column='LastName', max_length=45, blank=True, null=True)
     mobile = CharField(db_column='Mobile', max_length=11, validators=[
@@ -50,12 +50,11 @@ class User(AbstractBaseUser):
         RegexValidator(regex=r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", message="Enter Valid E-mail.")])
     password = CharField(db_column='Password', max_length=100)
 
-    GENDERS = Choices(
-        (0, 'MALE', _('Male')),
-        (1, 'FEMALE', _('Female')),
+    GENDERS = (
+        (1, _("Male")),
+        (2, _("Female")),
     )
-
-    gender = PositiveSmallIntegerField(_('Gender'), choices=GENDERS, blank=True, null=True)
+    gender = PositiveSmallIntegerField(db_column='Gender', choices=GENDERS, blank=True, null=True)
 
     date_of_birth = DateField(db_column='Birthday', blank=True, null=True)
 
@@ -71,7 +70,7 @@ class User(AbstractBaseUser):
 
     objects = UserManager()
 
-    USERNAME_FIELD = 'user_name'
+    USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
 
     class Meta:
@@ -84,7 +83,7 @@ class User(AbstractBaseUser):
         ordering = ['-time_created']
 
     def __str__(self):
-        return '{} {} - [{}]'.format(self.first_name, self.last_name, self.user_name)
+        return '{} {} - [{}]'.format(self.first_name, self.last_name, self.username)
 
     def has_perm(self, perm, obj=None):
         "Does the user have a specific permission?"
@@ -103,11 +102,10 @@ class User(AbstractBaseUser):
         return self.is_admin
 
     def save(self, *args, **kwargs):
-
         self.set_password(self.password)
 
-        if self.pk is not None:
-            self.time_modified = timezone.now()
+        # if self.pk is not None:
+        #     self.time_modified = timezone.now()
 
         super(User, self).save(*args, **kwargs)
 

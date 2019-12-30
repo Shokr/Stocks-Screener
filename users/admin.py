@@ -1,29 +1,31 @@
 from django.contrib import admin
 
-from .forms import UserForm
+from .forms import *
 
 
 class UserAdmin(admin.ModelAdmin):
     form = UserForm
     # view_on_site = False
 
-    search_fields = ('user_name', 'email')
+    search_fields = ('username', 'email')
 
     list_display = (
         'pk',
-        'user_name',
+        'username',
         'email',
         'time_created',
         'last_login',
         'is_admin',
     )
 
+    readonly_fields = ('time_created', 'time_modified', 'last_login')
+
     fieldsets = (
         ('Personal Information', {
             'fields': ('first_name', 'last_name', 'gender', 'date_of_birth', 'address')
         }),
         ('Auth Info', {
-            'fields': ('user_name', 'mobile', 'email', 'password')
+            'fields': ('username', 'mobile', 'email', 'password')
         }),
         ('Timeline', {
             'fields': ('time_created', 'time_modified', 'last_login')
@@ -37,4 +39,4 @@ class UserAdmin(admin.ModelAdmin):
     #     return False
 
 
-admin.site.register(UserAdmin)
+admin.site.register(User, UserAdmin)

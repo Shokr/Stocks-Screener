@@ -15,11 +15,36 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+#
+# import users.urls
+# import market.urls
+
+admin.autodiscover()
+
 
 urlpatterns = [
-    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
-    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
-
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# if settings.DEBUG:
+#     import debug_toolbar
+#
+#     urlpatterns += [
+#         path('__debug__/', include(debug_toolbar.urls)),
+#     ]
+######################################################################
+admin.site.site_header = "Stocks-Screener"
+admin.site.site_title = "Stocks Screener"
+admin.site.index_title = "Wakty Portal V_1.0.0.9"
+#######################################################################
