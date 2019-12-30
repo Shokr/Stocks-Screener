@@ -2,488 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="773ff041-cfee-42db-891f-84570668bfca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StocksScreener/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StocksScreener/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StocksScreener/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/StocksScreener/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/factories.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/factories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/test_forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/__main__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/_ffi.abi3.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/_ffi_build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/_legacy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/_password_hasher.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2/low_level.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2_cffi-19.2.0.dist-info/AUTHORS.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2_cffi-19.2.0.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2_cffi-19.2.0.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2_cffi-19.2.0.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2_cffi-19.2.0.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2_cffi-19.2.0.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/argon2_cffi-19.2.0.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django_jet-1.0.8.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django_jet-1.0.8.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django_jet-1.0.8.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django_jet-1.0.8.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django_jet-1.0.8.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django_jet-1.0.8.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/dashboard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/dashboard_modules/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/dashboard_modules/google_analytics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/dashboard_modules/google_analytics_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/dashboard_modules/yandex_metrika.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/dashboard_modules/yandex_metrika_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ar/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ar/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ar/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ar/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/cs/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/cs/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/cs/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/cs/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/de/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/de/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/de/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/de/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/en/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/en/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/en/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/en/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/es/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/es/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/es/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/es/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/fa/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/fa/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/fr/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/fr/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/pl/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/pt-br/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/pt-br/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/pt-br/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/pt-br/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ru/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ru/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ru/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/ru/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/zh_cn/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/locale/zh_cn/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/modules.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/south_migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/south_migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/static/jet.dashboard/dashboard_modules/google_analytics.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/static/jet.dashboard/dashboard_modules/yandex_metrika.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/static/jet.dashboard/vendor/chart.js/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/static/jet.dashboard/vendor/chart.js/Chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/static/jet.dashboard/vendor/chart.js/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/static/jet.dashboard/vendor/chart.js/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/static/jet.dashboard/vendor/chart.js/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/admin/app_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/dashboard_tools.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/module.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/app_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/feed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/google_analytics_period_visitors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/google_analytics_visitors_chart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/google_analytics_visitors_totals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/link_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/model_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/recent_actions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/yandex_metrika_period_visitors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/yandex_metrika_visitors_chart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/modules/yandex_metrika_visitors_totals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/update_module.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templates/jet.dashboard/update_module_fieldset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templatetags/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/templatetags/jet_dashboard_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/dashboard/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/filters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ar/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ar/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ar/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ar/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/cs/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/cs/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/cs/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/cs/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/de/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/de/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/de/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/de/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/en/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/en/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/en/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/en/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/es/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/es/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/es/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/es/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/fa/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/fa/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/fr/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/fr/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pl/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pl/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pl/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pl/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pt_BR/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pt_BR/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pt_BR/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/pt_BR/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ru/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ru/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ru/LC_MESSAGES/djangojs.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/ru/LC_MESSAGES/djangojs.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/zh_cn/LC_MESSAGES/django.mo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/locale/zh_cn/LC_MESSAGES/django.po" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/management/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/management/commands/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/management/commands/jet_custom_apps_example.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/management/commands/jet_side_menu_items_example.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/migrations/0002_delete_userdashboardmodule.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/ordered_set.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/south_migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/south_migrations/0002_auto__del_userdashboardmodule.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/south_migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/changelists.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/fonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/forms.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/css/widgets.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/js/SelectFilter2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/admin/js/related-widget-wrapper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_breadcrumbs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_changeform.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_changelist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_content.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_dashboard.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_delete-confirmation.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_globals.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_helpers.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_login.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_messages.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_modules.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_object-tools.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_relatedpopup.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_sidebar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/icons/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/icons/fonts/jet-icons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/icons/fonts/jet-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/icons/fonts/jet-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/icons/fonts/jet-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/icons/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/_jquery-ui.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-icons_454545_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-icons_888888_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/jquery-ui/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/select2/_layout.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/select2/_multiple.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/select2/_single.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/base.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/jquery-ui.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/jquery-ui.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/select2.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/select2.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/default/select2.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/base.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/jquery-ui.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/jquery-ui.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/select2.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/select2.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/green/select2.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/base.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/jquery-ui.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/jquery-ui.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/select2.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/select2.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-blue/select2.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/base.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/jquery-ui.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/jquery-ui.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/select2.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/select2.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-gray/select2.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/base.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/jquery-ui.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/jquery-ui.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/select2.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/select2.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-green/select2.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/base.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/jquery-ui.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/jquery-ui.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/jquery-ui.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/select2.theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/select2.theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/themes/light-violet/select2.theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/css/vendor.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/build/bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-pt-BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui-timepicker/jquery.ui.timepicker-tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ar-DZ.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-be.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-bs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-cy-GB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-en-AU.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-en-GB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-en-NZ.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-fo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-fr-CA.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-fr-CH.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-hy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-is.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-it-CH.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ka.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-kk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ky.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-lb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-nl-BE.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-nn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-pt-BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-rm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-sr-SR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-ta.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-tj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-zh-CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-zh-HK.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/jquery-ui/datepicker-zh-TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/is.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/pt-BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/zh-CN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/i18n/select2/zh-TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/changeform-tabs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/changeform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/changelist.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/checkboxes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/compact-inline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/date-time-widgets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/filters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/inlines.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/related-popups.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/scroll-to-bottom-detector.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/selects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/siblings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/sidebar/application-pinning.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/sidebar/bookmarks.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/sidebar/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/sidebar/popup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/themes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/tooltips.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/features/touchmove-non-scrollable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/branding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/breadcrumbs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/changeform-tabs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/delete-confirmation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/object-tools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/paginator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/related-widget-wrapper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/stacked-inline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/tabular-inline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/toolbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/layout-updaters/user-tools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/utils/jquery-icontains.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/utils/jquery-slidefade.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/utils/translate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/jet/js/src/utils/window-storage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/static/range_filter/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templates/admin/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templates/admin/edit_inline/compact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templates/admin/includes/fieldset.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templates/admin/popup_response.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templates/jet/related_field_ajax_list_filter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templates/rangefilter/date_filter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templatetags/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/templatetags/jet_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/dashboard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/test_dashboard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/test_filters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/test_ordered_set.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/test_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/test_utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/test_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/tests/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/jet/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -520,6 +61,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/wakty_portal" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -582,7 +124,8 @@
       <workItem from="1577691956822" duration="509000" />
       <workItem from="1577692478216" duration="1131000" />
       <workItem from="1577693662164" duration="4435000" />
-      <workItem from="1577698440661" duration="5429000" />
+      <workItem from="1577698440661" duration="6832000" />
+      <workItem from="1577707288932" duration="1437000" />
     </task>
     <task id="LOCAL-00001" summary="Users App.">
       <created>1577698092550</created>
@@ -591,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577698092550</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Users App.">
+      <created>1577704485487</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577704485487</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,19 +152,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="Users App." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577698090923">
+    <state x="298" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577707908103">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577698090923" />
+    <state x="298" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1313.741@47.27.1313.741" timestamp="1577707908103" />
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577704480377">
+      <screen x="47" y="27" width="1313" height="741" />
+    </state>
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577704480377" />
     <state x="243" y="27" width="918" height="741" key="CommitChangelistDialog2/48.27.1318.741@48.27.1318.741" timestamp="1577665046568" />
     <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577700632423">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
     <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl/47.27.1313.741@47.27.1313.741" timestamp="1577700632423" />
-    <state x="192" y="31" key="SettingsEditor" timestamp="1577700123831">
+    <state x="192" y="31" key="SettingsEditor" timestamp="1577704970746">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state x="192" y="31" key="SettingsEditor/47.27.1313.741@47.27.1313.741" timestamp="1577700123831" />
+    <state x="192" y="31" key="SettingsEditor/47.27.1313.741@47.27.1313.741" timestamp="1577704970746" />
     <state x="298" y="128" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1577698105562">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
