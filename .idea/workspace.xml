@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="773ff041-cfee-42db-891f-84570668bfca" name="Default Changelist" comment="" />
+    <list default="true" id="773ff041-cfee-42db-891f-84570668bfca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/users/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/viewsets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/StocksScreener.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StocksScreener.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StocksScreener/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/StocksScreener/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/factories.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/factories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/test_forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_tasks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/test_urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/test_views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -33,6 +60,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/wakty_portal" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/users" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="StocksScreener" type="Python.DjangoServer" factoryName="Django server">
@@ -84,6 +118,9 @@
       <workItem from="1577662089925" duration="1659000" />
       <workItem from="1577663928942" duration="768000" />
       <workItem from="1577664723539" duration="104000" />
+      <workItem from="1577691956822" duration="509000" />
+      <workItem from="1577692478216" duration="1131000" />
+      <workItem from="1577693662164" duration="4275000" />
     </task>
     <servers />
   </component>
@@ -91,9 +128,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="243" y="27" width="918" height="741" key="CommitChangelistDialog2" timestamp="1577665046568">
-      <screen x="48" y="27" width="1318" height="741" />
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577698090923">
+      <screen x="47" y="27" width="1313" height="741" />
     </state>
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577698090923" />
     <state x="243" y="27" width="918" height="741" key="CommitChangelistDialog2/48.27.1318.741@48.27.1318.741" timestamp="1577665046568" />
+    <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577693704377">
+      <screen x="47" y="27" width="1313" height="741" />
+    </state>
+    <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl/47.27.1313.741@47.27.1313.741" timestamp="1577693704377" />
+    <state x="192" y="31" key="SettingsEditor" timestamp="1577697554883">
+      <screen x="47" y="27" width="1313" height="741" />
+    </state>
+    <state x="192" y="31" key="SettingsEditor/47.27.1313.741@47.27.1313.741" timestamp="1577697554883" />
   </component>
 </project>
