@@ -67,7 +67,7 @@ class Stock(SoftDeletionModel):
 
     info = TextField(db_column='Info', blank=True, null=True, verbose_name="Extra Info")
 
-    creator = ForeignKey(to='users.User', related_name='stock_creator', on_delete=SET_NULL, db_column='Creator', blank=True, null=True, default=1)
+    creator = ForeignKey(to='users.User', related_name='stock_creator', on_delete=SET_NULL, db_column='Creator', blank=True, null=True)
 
     time_created = DateTimeField(db_column='TimeCreated', auto_created=True, default=timezone.now, blank=True, null=True)
 

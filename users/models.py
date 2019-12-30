@@ -82,7 +82,7 @@ class User(AbstractBaseUser):
         ordering = ['-time_created']
 
     def __str__(self):
-        return '{} {} - [{}]'.format(self.first_name, self.last_name, self.username)
+        return '{}'.format(self.username)
 
     def has_perm(self, perm, obj=None):
         "Does the user have a specific permission?"
@@ -103,10 +103,7 @@ class User(AbstractBaseUser):
     def save(self, *args, **kwargs):
         # self.set_password(self.password)
 
-        # if self.pk is not None:
-        #     self.time_modified = timezone.now()
-
         super(User, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse("user:detail", kwargs={"user_name": self.user_name})
+        return reverse("user:detail", kwargs={"username": self.username})
