@@ -32,6 +32,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
+    # path('api/v1/', include('.routers'), namespace='api_v1')
 ]
 
 urlpatterns += staticfiles_urlpatterns()

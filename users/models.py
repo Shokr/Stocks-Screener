@@ -74,7 +74,6 @@ class User(AbstractBaseUser):
     REQUIRED_FIELDS = ['email']
 
     class Meta:
-        # managed = False
         db_table = 'users'
 
         verbose_name = 'User'
@@ -102,7 +101,7 @@ class User(AbstractBaseUser):
         return self.is_admin
 
     def save(self, *args, **kwargs):
-        self.set_password(self.password)
+        # self.set_password(self.password)
 
         # if self.pk is not None:
         #     self.time_modified = timezone.now()

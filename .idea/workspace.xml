@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="773ff041-cfee-42db-891f-84570668bfca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StocksScreener/routers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/routers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StocksScreener/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/StocksScreener/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +72,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/users" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/users" />
     </key>
@@ -125,7 +133,7 @@
       <workItem from="1577692478216" duration="1131000" />
       <workItem from="1577693662164" duration="4435000" />
       <workItem from="1577698440661" duration="6832000" />
-      <workItem from="1577707288932" duration="1437000" />
+      <workItem from="1577707288932" duration="9276000" />
     </task>
     <task id="LOCAL-00001" summary="Users App.">
       <created>1577698092550</created>
@@ -141,37 +149,47 @@
       <option name="project" value="LOCAL" />
       <updated>1577704485487</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="30-12-2019">
+      <created>1577708833761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577708833761</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Users App." />
-    <option name="LAST_COMMIT_MESSAGE" value="Users App." />
+    <MESSAGE value="30-12-2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="30-12-2019" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="298" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577707908103">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
     <state x="298" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1313.741@47.27.1313.741" timestamp="1577707908103" />
-    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577704480377">
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577708830889">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577704480377" />
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577708830889" />
     <state x="243" y="27" width="918" height="741" key="CommitChangelistDialog2/48.27.1318.741@48.27.1318.741" timestamp="1577665046568" />
-    <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577700632423">
+    <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577711161878">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl/47.27.1313.741@47.27.1313.741" timestamp="1577700632423" />
-    <state x="192" y="31" key="SettingsEditor" timestamp="1577704970746">
+    <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl/47.27.1313.741@47.27.1313.741" timestamp="1577711161878" />
+    <state x="192" y="31" key="SettingsEditor" timestamp="1577710057465">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state x="192" y="31" key="SettingsEditor/47.27.1313.741@47.27.1313.741" timestamp="1577704970746" />
-    <state x="298" y="128" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1577698105562">
+    <state x="192" y="31" key="SettingsEditor/47.27.1313.741@47.27.1313.741" timestamp="1577710057465" />
+    <state x="298" y="128" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1577708844255">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state x="298" y="128" width="800" height="536" key="Vcs.Push.Dialog.v2/47.27.1313.741@47.27.1313.741" timestamp="1577698105562" />
+    <state x="298" y="128" width="800" height="536" key="Vcs.Push.Dialog.v2/47.27.1313.741@47.27.1313.741" timestamp="1577708844255" />
   </component>
 </project>
