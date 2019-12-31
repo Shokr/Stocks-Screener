@@ -74,7 +74,7 @@ class Stock(SoftDeletionModel):
     time_modified = DateTimeField(db_column='TimeModified', auto_now=True, blank=True, null=True)
 
     class Meta:
-        # managed = False
+        managed = False
         db_table = 'stock'
 
         verbose_name = 'Stock'

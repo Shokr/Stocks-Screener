@@ -31,5 +31,10 @@ class User(AbstractUser):
 
         ordering = ['name']
 
+    def save(self, *args, **kwargs):
+        if not self.name:
+            self.name = self.first_name+' '+self.last_name
+        super(User, self).save(*args, **kwargs)
+
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})

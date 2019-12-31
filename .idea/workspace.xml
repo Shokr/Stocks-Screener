@@ -3,26 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="773ff041-cfee-42db-891f-84570668bfca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/migrations/0002_auto_20191230_2127.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/migrations/0003_auto_20191230_2328.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/user_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/user_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0002_auto_20191230_2328.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StocksScreener/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/StocksScreener/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra/stock_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/extra/stock_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/migrations/0002_stock_creator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/factories.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +142,7 @@
       <workItem from="1577730422349" duration="1153000" />
       <workItem from="1577731628963" duration="8222000" />
       <workItem from="1577780221826" duration="625000" />
-      <workItem from="1577780901683" duration="3496000" />
+      <workItem from="1577780901683" duration="5151000" />
     </task>
     <task id="LOCAL-00001" summary="Users App.">
       <created>1577698092550</created>
@@ -192,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577737356175</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="31-12-2019">
+      <created>1577784902220</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577784902220</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +196,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Users App." />
     <MESSAGE value="30-12-2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="30-12-2019" />
+    <MESSAGE value="31-12-2019" />
+    <option name="LAST_COMMIT_MESSAGE" value="31-12-2019" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -215,34 +210,34 @@
     </state>
     <state x="298" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1313.741@47.27.1313.741" timestamp="1577707908103" />
     <state x="300" y="58" width="883" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/48.27.1318.741@48.27.1318.741" timestamp="1577730396553" />
-    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577784895640">
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577786361151">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577784895640" />
+    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577786361151" />
     <state x="243" y="27" width="918" height="741" key="CommitChangelistDialog2/48.27.1318.741@48.27.1318.741" timestamp="1577741999747" />
     <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577711161878">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
     <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl/47.27.1313.741@47.27.1313.741" timestamp="1577711161878" />
-    <state width="1267" height="152" key="GridCell.Tab.0.bottom" timestamp="1577784129980">
+    <state width="1267" height="152" key="GridCell.Tab.0.bottom" timestamp="1577785708883">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state width="1267" height="152" key="GridCell.Tab.0.bottom/47.27.1313.741@47.27.1313.741" timestamp="1577784129980" />
+    <state width="1267" height="152" key="GridCell.Tab.0.bottom/47.27.1313.741@47.27.1313.741" timestamp="1577785708883" />
     <state width="1272" height="149" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1577741970538" />
-    <state width="1267" height="152" key="GridCell.Tab.0.center" timestamp="1577784129980">
+    <state width="1267" height="152" key="GridCell.Tab.0.center" timestamp="1577785708883">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state width="1267" height="152" key="GridCell.Tab.0.center/47.27.1313.741@47.27.1313.741" timestamp="1577784129980" />
+    <state width="1267" height="152" key="GridCell.Tab.0.center/47.27.1313.741@47.27.1313.741" timestamp="1577785708883" />
     <state width="1272" height="149" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1577741970536" />
-    <state width="1267" height="152" key="GridCell.Tab.0.left" timestamp="1577784129979">
+    <state width="1267" height="152" key="GridCell.Tab.0.left" timestamp="1577785708883">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state width="1267" height="152" key="GridCell.Tab.0.left/47.27.1313.741@47.27.1313.741" timestamp="1577784129979" />
+    <state width="1267" height="152" key="GridCell.Tab.0.left/47.27.1313.741@47.27.1313.741" timestamp="1577785708883" />
     <state width="1272" height="149" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1577741970534" />
-    <state width="1267" height="152" key="GridCell.Tab.0.right" timestamp="1577784129980">
+    <state width="1267" height="152" key="GridCell.Tab.0.right" timestamp="1577785708883">
       <screen x="47" y="27" width="1313" height="741" />
     </state>
-    <state width="1267" height="152" key="GridCell.Tab.0.right/47.27.1313.741@47.27.1313.741" timestamp="1577784129980" />
+    <state width="1267" height="152" key="GridCell.Tab.0.right/47.27.1313.741@47.27.1313.741" timestamp="1577785708883" />
     <state width="1272" height="149" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1577741970537" />
     <state x="192" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1577780436308">
       <screen x="47" y="27" width="1313" height="741" />

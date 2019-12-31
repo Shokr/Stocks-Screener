@@ -74,5 +74,5 @@ if settings.DEBUG:
 ######################################################################
 admin.site.site_header = "Stocks-Screener"
 admin.site.site_title = "Stocks Screener"
-admin.site.index_title = "Stocks Screener Portal V 1.0"
+admin.site.index_title = "Stocks Screener Admin"
 #######################################################################
