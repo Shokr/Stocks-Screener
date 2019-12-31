@@ -1,7 +1,8 @@
 import pytest
-from cloud_nlp.users.views import UserRedirectView, UserUpdateView
 from django.conf import settings
 from django.test import RequestFactory
+
+from users.views import UserRedirectView, UserUpdateView
 
 pytestmark = pytest.mark.django_db
 

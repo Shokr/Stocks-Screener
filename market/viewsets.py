@@ -64,6 +64,25 @@ def StockDetail(request, pk, format=None):
 @csrf_exempt
 @api_view(['GET', ])
 @permission_classes((permissions.AllowAny,))
+def StockQuote(request, pk, format=None):
+    try:
+        symbol = Stock.objects.get(pk=pk).symbol
+    except symbol.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        from alpha_vantage.timeseries import TimeSeries
+        ts = TimeSeries(key=key)
+        try:
+            data, meta_data = ts.get_quote_endpoint(symbol=symbol)
+        except Exception:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response(data)
+
+
+@csrf_exempt
+@api_view(['GET', ])
+@permission_classes((permissions.AllowAny,))
 def TimeSeries(request, pk, format=None):
     try:
         symbol = Stock.objects.get(pk=pk).symbol
@@ -74,7 +93,7 @@ def TimeSeries(request, pk, format=None):
         from alpha_vantage.timeseries import TimeSeries
         ts = TimeSeries(key=key)
         try:
-            data, meta_data = ts.get_intraday(symbol=symbol, interval='1min', outputsize='full')
+            data, meta_data = ts.get_daily(symbol=symbol, interval='1min', outputsize='compact')
         except Exception:
             return Response(status=status.HTTP_404_NOT_FOUND)
             # return Response({'ERROR': 'Stock not found'})
@@ -128,8 +147,5 @@ def SectorPerformances(request, format=None):
         sp = SectorPerformances(key=key)
         data, meta_data = sp.get_sector()
         return Response(data)
-
-
-
 
 # urlpatterns = format_suffix_patterns(urlpatterns)

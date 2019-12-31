@@ -1,7 +1,7 @@
 import pytest
 
-from cloud_nlp.users.forms import UserCreationForm
-from cloud_nlp.users.tests.factories import UserFactory
+from users.forms import UserCreationForm
+from users.tests.factories import UserFactory
 
 pytestmark = pytest.mark.django_db
 

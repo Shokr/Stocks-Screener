@@ -6,7 +6,7 @@ from factory import DjangoModelFactory, Faker, post_generation
 
 class UserFactory(DjangoModelFactory):
 
-    username = Faker("user_name")
+    username = Faker("username")
     email = Faker("email")
     name = Faker("name")
 
