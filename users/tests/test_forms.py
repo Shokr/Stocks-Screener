@@ -1,22 +1,21 @@
 import pytest
 
-from users.forms import UserForm
-from users.tests.factories import UserFactory
+from cloud_nlp.users.forms import UserCreationForm
+from cloud_nlp.users.tests.factories import UserFactory
 
 pytestmark = pytest.mark.django_db
 
 
-class TestUserForm:
+class TestUserCreationForm:
     def test_clean_username(self):
         # A user with proto_user params does not exist yet.
         proto_user = UserFactory.build()
 
-        form = UserForm(
+        form = UserCreationForm(
             {
                 "username": proto_user.username,
-                "email": proto_user.email,
-                "mobile": proto_user.mobile,
-                "password": proto_user._password,
+                "password1": proto_user._password,
+                "password2": proto_user._password,
             }
         )
 
@@ -28,12 +27,11 @@ class TestUserForm:
 
         # The user with proto_user params already exists,
         # hence cannot be created.
-        form = UserForm(
+        form = UserCreationForm(
             {
                 "username": proto_user.username,
-                "email": proto_user.email,
-                "mobile": proto_user.mobile,
-                "password": proto_user._password,
+                "password1": proto_user._password,
+                "password2": proto_user._password,
             }
         )
 

@@ -1,54 +1,17 @@
-import uuid
-
-from django.contrib.auth.models import (BaseUserManager, AbstractBaseUser)
+from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
-from django.db.models import *
+from django.db.models import CharField, DateField, PositiveSmallIntegerField
 from django.urls import reverse
-from django.utils import timezone
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 
 
-class UserManager(BaseUserManager):
-    def create_user(self, email, username, password=None):
-        """
-        Creates and saves a User with the given email, national_id and password.
-        """
-        if not email:
-            raise ValueError('Users must have an email address')
+class User(AbstractUser):
+    # First Name and Last Name do not cover name patterns
+    # around the globe.
+    name = CharField(_("Name of User"), blank=True, max_length=255)
 
-        user = self.model(
-            email=self.normalize_email(email),
-            username=username,
-        )
-
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
-
-    def create_superuser(self, email, username, password):
-        """
-        Creates and saves a superuser with the given email, national_id and password.
-        """
-        user = self.create_user(
-            email,
-            password=password,
-            username=username,
-        )
-        user.is_admin = True
-        user.save(using=self._db)
-        return user
-
-
-class User(AbstractBaseUser):
-    guid = CharField(db_column='GUID', max_length=45, default=uuid.uuid1, editable=False)
-    username = CharField(db_column='UserName', max_length=25, unique=True, db_index=True, verbose_name="User Name")
-    first_name = CharField(db_column='FirstName', max_length=45, blank=True, null=True)
-    last_name = CharField(db_column='LastName', max_length=45, blank=True, null=True)
     mobile = CharField(db_column='Mobile', max_length=11, validators=[
         RegexValidator(regex=r'^\+?1?\d{11,11}$', message="Phone number must be entered [01xxxxxxxxx] Num.")])
-    email = CharField(db_column='Email', max_length=100, unique=True, validators=[
-        RegexValidator(regex=r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", message="Enter Valid E-mail.")])
-    password = CharField(db_column='Password', max_length=100)
 
     GENDERS = (
         (1, _("Male")),
@@ -60,50 +23,13 @@ class User(AbstractBaseUser):
 
     address = CharField(db_column='Address1', max_length=100, verbose_name="Work Address", blank=True, null=True)
 
-    time_created = DateTimeField(db_column='TimeCreated', auto_created=True, default=timezone.now, blank=True,
-                                 null=True)
-    time_modified = DateTimeField(db_column='TimeModified', auto_now=True, blank=True, null=True)
-
-    last_login = DateTimeField(db_column='LastLogin', blank=True, null=True)
-    is_active = BooleanField(db_column='IsActive', default=True, blank=True, null=True)
-    is_admin = BooleanField(db_column='IsAdmin', default=False, blank=True, null=True)
-
-    objects = UserManager()
-
-    USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email']
-
     class Meta:
         db_table = 'users'
 
         verbose_name = 'User'
         verbose_name_plural = 'Users'
 
-        ordering = ['-time_created']
-
-    def __str__(self):
-        return '{}'.format(self.username)
-
-    def has_perm(self, perm, obj=None):
-        "Does the user have a specific permission?"
-        # Simplest possible answer: Yes, always
-        return True
-
-    def has_module_perms(self, app_label):
-        "Does the user have permissions to view the app `app_label`?"
-        # Simplest possible answer: Yes, always
-        return True
-
-    @property
-    def is_staff(self):
-        "Is the user a member of staff?"
-        # Simplest possible answer: All admins are staff
-        return self.is_admin
-
-    def save(self, *args, **kwargs):
-        # self.set_password(self.password)
-
-        super(User, self).save(*args, **kwargs)
+        ordering = ['name']
 
     def get_absolute_url(self):
-        return reverse("user:detail", kwargs={"username": self.username})
+        return reverse("users:detail", kwargs={"username": self.username})
