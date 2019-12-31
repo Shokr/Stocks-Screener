@@ -35,6 +35,10 @@ LANGUAGES = [
     ('ar', _('Arabic')),
 ]
 
+###################################
+AlphaVantagekey = 'FRT0VDROFWGO6SYZ'
+###################################
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-i18n
 USE_I18N = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#use-l10n

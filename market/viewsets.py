@@ -1,5 +1,4 @@
 # from rest_framework.urlpatterns import format_suffix_patterns
-
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import permissions
 from rest_framework import status
@@ -7,6 +6,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 
+from StocksScreener.settings import AlphaVantagekey as key
 from .serializers import *
 
 
@@ -58,5 +58,78 @@ def StockDetail(request, pk, format=None):
     elif request.method == 'DELETE':
         Stock.delete(StockData)
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+####################################################################################################################3
+@csrf_exempt
+@api_view(['GET', ])
+@permission_classes((permissions.AllowAny,))
+def TimeSeries(request, pk, format=None):
+    try:
+        symbol = Stock.objects.get(pk=pk).symbol
+    except symbol.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        from alpha_vantage.timeseries import TimeSeries
+        ts = TimeSeries(key=key)
+        try:
+            data, meta_data = ts.get_intraday(symbol=symbol, interval='1min', outputsize='full')
+        except Exception:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+            # return Response({'ERROR': 'Stock not found'})
+        return Response(data)
+
+
+@csrf_exempt
+@api_view(['GET', ])
+@permission_classes((permissions.AllowAny,))
+def TimeSeriesWeekly(request, pk, format=None):
+    try:
+        symbol = Stock.objects.get(pk=pk).symbol
+    except symbol.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        from alpha_vantage.timeseries import TimeSeries
+        ts = TimeSeries(key=key)
+        try:
+            data, meta_data = ts.get_weekly_adjusted(symbol=symbol)
+        except Exception:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response(data)
+
+
+@csrf_exempt
+@api_view(['GET', ])
+@permission_classes((permissions.AllowAny,))
+def TimeSeriesMonthly(request, pk, format=None):
+    try:
+        symbol = Stock.objects.get(pk=pk).symbol
+    except symbol.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':
+        from alpha_vantage.timeseries import TimeSeries
+        ts = TimeSeries(key=key)
+        try:
+            data, meta_data = ts.get_monthly(symbol=symbol)
+        except Exception:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response(data)
+
+
+@csrf_exempt
+@api_view(['GET', ])
+@permission_classes((permissions.AllowAny,))
+def SectorPerformances(request, format=None):
+    if request.method == 'GET':
+        from alpha_vantage.sectorperformance import SectorPerformances
+        sp = SectorPerformances(key=key)
+        data, meta_data = sp.get_sector()
+        return Response(data)
+
+
+
 
 # urlpatterns = format_suffix_patterns(urlpatterns)
