@@ -1,11 +1,10 @@
+# from rest_framework.urlpatterns import format_suffix_patterns
 from django.views.decorators.csrf import csrf_exempt
-
-from rest_framework.parsers import JSONParser
+from rest_framework import permissions
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework import permissions
+from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
-
 
 from .serializers import *
 
@@ -108,3 +107,5 @@ def GroupDetail(request, pk, format=None):
     elif request.method == 'DELETE':
         Group.delete(Group_data)
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+# urlpatterns = format_suffix_patterns(urlpatterns)

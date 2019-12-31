@@ -1,3 +1,5 @@
+# from rest_framework.urlpatterns import format_suffix_patterns
+
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import permissions
 from rest_framework import status
@@ -56,3 +58,5 @@ def StockDetail(request, pk, format=None):
     elif request.method == 'DELETE':
         Stock.delete(StockData)
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+# urlpatterns = format_suffix_patterns(urlpatterns)

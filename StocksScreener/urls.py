@@ -21,10 +21,6 @@ from django.urls import path, include
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
 
-#
-# import users.urls
-# import market.urls
-
 admin.autodiscover()
 
 
@@ -32,7 +28,11 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),  # grappelli URLS
 
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
+    path('users/', include('users.urls', namespace='users')),
+    path('market/', include('market.urls', namespace='market')),
+
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
     path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
     # path('api/v1/', include('.routers'), namespace='api_v1')
 ]

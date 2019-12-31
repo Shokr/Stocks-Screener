@@ -1,11 +1,13 @@
-# from django.urls import path
-#
-# from .views import *
-#
-# app_name = "users"
-#
-# urlpatterns = [
-#     path("~redirect/", view=user_redirect_view, name="redirect"),
-#     path("~update/", view=user_update_view, name="update"),
-#     path("<str:username>/", view=user_detail_view, name="detail"),
-# ]
+from django.urls import path
+
+from .viewsets import *
+
+app_name = "market"
+
+urlpatterns = [
+    path('stocks/', StockList),
+    path('stocks/<int:pk>/', StockDetail),
+
+    # path("/", view=, name=""),
+
+]
