@@ -1,36 +1,58 @@
 {% extends "base.html" %}
-{% load static %}
 
-{% block title %}User: {{ object.username }}{% endblock %}
+{% block title %}User{% endblock %}
 
-{% block content %}
-<div class="container">
+{% block card_header %}User: {{ object.username }}{% endblock card_header %}
 
-  <div class="row">
-    <div class="col-sm-12">
+{% block card-body %}
+    <div class="container">
 
-      <h2>{{ object.username }}</h2>
-      {% if object.name %}
-        <p>{{ object.name }}</p>
-      {% endif %}
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h2>{{ object.username }}</h2>
+
+                {% if object.name %}
+                    <p>{{ object.name }}</p>
+                {% endif %}
+
+                {% if object.mobile %}
+                    <p>{{ object.mobile }}</p>
+                {% endif %}
+
+                {% if object.gender %}
+                    {% if object.gender == 1 %}
+                        <i class="fa fa-male" style="color: #0A246A"></i> Male
+                    {% endif %}
+                    {% if object.gender == 2 %}
+                        <i class="fa fa-female" style="color: red"></i> Female
+                    {% endif %}
+                {% endif %}
+
+                {% if object.address %}
+                    <p>{{ object.address }}</p>
+                {% endif %}
+
+                {% if object.date_of_birth %}
+                    <p>{{ object.date_of_birth }}</p>
+                {% endif %}
+
+            </div>
+        </div>
+
+        {% if object == request.user %}
+            <!-- Action buttons -->
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <a class="btn btn-green" href="{% url 'users:update' %}" role="button">My Info</a>
+                    <!-- Your Stuff: Custom user template urls -->
+                </div>
+
+            </div>
+            <!-- End Action buttons -->
+        {% endif %}
+
+
     </div>
-  </div>
-
-{% if object == request.user %}
-<!-- Action buttons -->
-<div class="row">
-
-  <div class="col-sm-12">
-    <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
-    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
-    <!-- Your Stuff: Custom user template urls -->
-  </div>
-
-</div>
-<!-- End Action buttons -->
-{% endif %}
-
-
-</div>
-{% endblock content %}
-
+{% endblock card-body %}

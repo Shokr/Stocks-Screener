@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Update Stock{% endblock %}
+
+{% block card_header %}Update Stock{% endblock card_header %}
+
+{% block card-body %}
+    <form class="form-horizontal" action="{% url 'market:update_stock' stock.pk %}" method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="first_name" class="control-label">Symbol</label>
+            <div>
+                {% render_field StockForm.symbol type="text" class="form-control" id="Symbol" placeholder="Symbol" %}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name" class="control-label">Name</label>
+            <div>
+                {% render_field StockForm.name type="text" class="form-control" id="name" placeholder="Co. Name" %}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name" class="control-label">Sector</label>
+            <div>
+                {% render_field StockForm.sector type="text" class="form-control" id="sector" placeholder="Sector Name" %}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name" class="control-label">Info</label>
+            <div>
+                {% render_field StockForm.info type="text" class="form-control" id="info" placeholder="Extra .." %}
+            </div>
+        </div>
+
+        <a href="{% url 'market:list_stocks' %}" class="btn btn-danger">Cancel</a>
+
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-edit"></i>
+        </button>
+
+    </form>
+{% endblock card-body %}

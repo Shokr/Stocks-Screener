@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}View Stock{% endblock %}
+
+{% block card_header %}{{ stock.name }}{% endblock card_header %}
+
+{% block card-body %}
+    <h1>{{ stock.symbol }}</h1>
+    <h5>{{ stock.sector }}</h5>
+{#    <ul>#}
+{#        <li>{{ stock.time_created }}</li>#}
+{#        <li>{{ stock.time_created }}</li>#}
+{#    </ul>#}
+{#    <br>#}
+{#    <textarea>{{ stock.info }}</textarea>#}
+{% endblock card-body %}

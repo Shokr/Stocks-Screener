@@ -21,5 +21,5 @@ urlpatterns = [
     path('create', create_stock, name='create_stock'),
     path('update/<int:pk>', update_stock, name='update_stock'),
     path('delete/<int:pk>', delete_stock, name='delete_stock'),
-    path('<int:pk>', stock_details, name='stock_details'),
+    path('<int:pk>', view_stock, name='view_stock'),
 ]

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}list Stocks{% endblock %}
+
+{% block card_header %}Stocks{% endblock card_header %}
+
+{% block card-body %}
+
+    <table id="table" data-toggle="table" data-pagination="true"
+           data-search="true" data-show-columns="true"
+           data-show-toggle="true" data-resizable="true" data-toolbar="#toolbar">
+        <thead>
+        <tr>
+            <th data-field="id">Pk</th>
+            <th data-field="symbol" data-editable="true">Symbol</th>
+            <th data-field="name" data-editable="true">Name</th>
+            <th data-field="sector">Sector</th>
+            <th data-field="action">Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for stock in stocks %}
+
+            <tr>
+                <td>{{ stock.pk }}</td>
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.name }}</td>
+                <td>{{ stock.sector }}</td>
+
+                <td class="datatable-ct">
+                    <a href="{% url 'market:update_stock' stock.pk %}"><i class="fa fa-edit"></i></a>
+                    <a href="{% url 'market:delete_stock' stock.pk %}"><i class="fa fa-trash"></i></a>
+                    <a href="{% url 'market:view_stock' stock.pk %}"><i class="fa fa-eye"></i></a>
+                </td>
+            </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+
+{% endblock card-body %}
+
+{% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+{% endblock script %}

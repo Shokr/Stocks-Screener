@@ -7,19 +7,14 @@ from .forms import *
 @login_required
 def create_stock(request):
     if request.method == 'POST':
-        created_stock_pk = None
         filled_form = StockForm(request.POST, request.FILES)
         if filled_form.is_valid():
             created_stock = filled_form.save()
-            created_stock_pk = created_stock.id_user
-            note = 'stock %s was created' % (filled_form.cleaned_data['name'])
             filled_form = StockForm()
         else:
-            note = 'stock was not created, please try again'
-        new_form = StockForm()
+            new_form = StockForm()
 
-        return render(request, 'market/add_stock.html',
-                      {'StockForm': filled_form, 'note': note, 'created_stock_pk': created_stock_pk})
+        return redirect('market:list_stocks')
     else:
         form = StockForm()
         return render(request, 'market/add_stock.html', {'StockForm': form})
@@ -34,13 +29,12 @@ def update_stock(request, pk):
         if filled_form.is_valid():
             filled_form.save()
             form = filled_form
-            note = 'Your stock has been processed.'
-            return render(request, 'market/edit_stock.html', {'StockForm': form, 'stock': stock, 'note': note})
+            return redirect('market:list_stocks')
     return render(request, 'market/edit_stock.html', {'StockForm': form, 'stock': stock})
 
 
 @login_required
-def stock_details(request, pk):
+def view_stock(request, pk):
     stock = get_object_or_404(Stock, pk=pk)
     return render(request, 'market/view_stock.html', {'stock': stock})
 
@@ -51,9 +45,8 @@ def list_stocks(request):
     return render(request, 'market/list_stocks.html', {'stocks': stocks})
 
 
+@login_required
 def delete_stock(request, pk):
-    stock = get_object_or_404(Stock, pk=pk)
-    if request.method == 'POST':
-        stock.delete()
-        return redirect('tasks:stocks')
-    return render(request, 'market/stock_confirm_delete.html', {'object': stock})
+    stock = Stock.objects.get(pk=pk)
+    stock.delete()
+    return redirect('market:list_stocks')
