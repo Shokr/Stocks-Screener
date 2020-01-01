@@ -2,8 +2,10 @@
 
 {% block title %}Forbidden (403){% endblock %}
 
-{% block content %}
-<h1>Forbidden (403)</h1>
+{% block card_header %}403{% endblock card_header %}
 
-<p>CSRF verification failed. Request aborted.</p>
-{% endblock content %}
+{% block card-body %}
+    <h1>Forbidden (403)</h1>
+
+    <p>CSRF verification failed. Request aborted.</p>
+{% endblock card-body %}

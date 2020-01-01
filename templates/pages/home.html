@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
-{#{% block title %}Home{% endblock %}#}
-{##}
-{#{% block content %}#}
-{#<h1>HELLO, {{ request.user }}</h1>#}
-{##}
-{#<p>...........................</p>#}
-{#{% endblock content %}#}
+{% block title %}Home{% endblock %}
+
+{% block card_header %}Home{% endblock card_header %}
+
+{% block card-body %}
+    <h1>Hi</h1>
+
+{% endblock card-body %}
