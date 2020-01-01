@@ -48,3 +48,14 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_redirect_view = UserRedirectView.as_view()
+
+#######################################################################################################################
+#
+#
+# @login_required
+# def users(request):
+#     users_count = User.objects.get_queryset().count()
+#     users = User.objects.get_queryset()
+#     return render(request, 'users/templates/business_tree/tree.html', {'users_count': users_count, 'users': users})
+
+########################################################################################################################

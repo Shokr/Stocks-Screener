@@ -93,7 +93,7 @@ def TimeSeries(request, pk, format=None):
         from alpha_vantage.timeseries import TimeSeries
         ts = TimeSeries(key=key)
         try:
-            data, meta_data = ts.get_daily(symbol=symbol, interval='1min', outputsize='compact')
+            data, meta_data = ts.get_daily(symbol=symbol, outputsize='compact')
         except Exception:
             return Response(status=status.HTTP_404_NOT_FOUND)
             # return Response({'ERROR': 'Stock not found'})
