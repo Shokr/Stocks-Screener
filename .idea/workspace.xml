@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="773ff041-cfee-42db-891f-84570668bfca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/StocksScreener.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StocksScreener.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market/viewsets.py" beforeDir="false" afterPath="$PROJECT_DIR$/market/viewsets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/factories.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/factories.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/test_forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_tasks.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/test_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests/test_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/market" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wakty_portal/wakty_portal/urls.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -143,6 +138,8 @@
       <workItem from="1577731628963" duration="8222000" />
       <workItem from="1577780221826" duration="625000" />
       <workItem from="1577780901683" duration="21470000" />
+      <workItem from="1577824084810" duration="619000" />
+      <workItem from="1577897657188" duration="13173000" />
     </task>
     <task id="LOCAL-00001" summary="Users App.">
       <created>1577698092550</created>
@@ -214,7 +211,35 @@
       <option name="project" value="LOCAL" />
       <updated>1577799059505</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1-1-2020">
+      <created>1577902335313</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577902335313</updated>
+    </task>
+    <task id="LOCAL-00012" summary="1-1-2020">
+      <created>1577902676598</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1577902676598</updated>
+    </task>
+    <task id="LOCAL-00013" summary="1-1-2020">
+      <created>1577903078258</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577903078258</updated>
+    </task>
+    <task id="LOCAL-00014" summary="1-1-2020">
+      <created>1577911605053</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1577911605053</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +250,8 @@
     <MESSAGE value="Users App." />
     <MESSAGE value="30-12-2019" />
     <MESSAGE value="31-12-2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="31-12-2019" />
+    <MESSAGE value="1-1-2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="1-1-2020" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -238,45 +264,58 @@
     </state>
     <state x="298" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/47.27.1313.741@47.27.1313.741" timestamp="1577707908103" />
     <state x="300" y="58" width="883" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/48.27.1318.741@48.27.1318.741" timestamp="1577730396553" />
-    <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577803338350">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state x="390" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577908960462">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="390" y="125" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/48.27.1318.741@48.27.1318.741" timestamp="1577908960462" />
+    <state x="243" y="27" width="919" height="741" key="CommitChangelistDialog2" timestamp="1577912397677">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="241" y="27" width="919" height="741" key="CommitChangelistDialog2/47.27.1313.741@47.27.1313.741" timestamp="1577803338350" />
-    <state x="243" y="27" width="918" height="741" key="CommitChangelistDialog2/48.27.1318.741@48.27.1318.741" timestamp="1577741999747" />
-    <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577711161878">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state x="243" y="27" width="918" height="741" key="CommitChangelistDialog2/48.27.1318.741@48.27.1318.741" timestamp="1577912397677" />
+    <state x="489" y="154" width="424" height="491" key="FileChooserDialogImpl" timestamp="1577898766851">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="486" y="154" width="424" height="484" key="FileChooserDialogImpl/47.27.1313.741@47.27.1313.741" timestamp="1577711161878" />
-    <state width="1267" height="152" key="GridCell.Tab.0.bottom" timestamp="1577803287564">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state x="489" y="154" width="424" height="491" key="FileChooserDialogImpl/48.27.1318.741@48.27.1318.741" timestamp="1577898766851" />
+    <state width="1272" height="149" key="GridCell.Tab.0.bottom" timestamp="1577912029593">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state width="1267" height="152" key="GridCell.Tab.0.bottom/47.27.1313.741@47.27.1313.741" timestamp="1577803287564" />
-    <state width="1272" height="149" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1577741970538" />
-    <state width="1267" height="152" key="GridCell.Tab.0.center" timestamp="1577803287563">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state width="1272" height="149" key="GridCell.Tab.0.bottom/48.27.1318.741@48.27.1318.741" timestamp="1577912029593" />
+    <state width="1272" height="149" key="GridCell.Tab.0.center" timestamp="1577912029592">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state width="1267" height="152" key="GridCell.Tab.0.center/47.27.1313.741@47.27.1313.741" timestamp="1577803287563" />
-    <state width="1272" height="149" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1577741970536" />
-    <state width="1267" height="152" key="GridCell.Tab.0.left" timestamp="1577803287562">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state width="1272" height="149" key="GridCell.Tab.0.center/48.27.1318.741@48.27.1318.741" timestamp="1577912029592" />
+    <state width="1272" height="149" key="GridCell.Tab.0.left" timestamp="1577912029592">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state width="1267" height="152" key="GridCell.Tab.0.left/47.27.1313.741@47.27.1313.741" timestamp="1577803287562" />
-    <state width="1272" height="149" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1577741970534" />
-    <state width="1267" height="152" key="GridCell.Tab.0.right" timestamp="1577803287564">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state width="1272" height="149" key="GridCell.Tab.0.left/48.27.1318.741@48.27.1318.741" timestamp="1577912029592" />
+    <state width="1272" height="149" key="GridCell.Tab.0.right" timestamp="1577912029593">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state width="1267" height="152" key="GridCell.Tab.0.right/47.27.1313.741@47.27.1313.741" timestamp="1577803287564" />
-    <state width="1272" height="149" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1577741970537" />
-    <state x="192" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1577780436308">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state width="1272" height="149" key="GridCell.Tab.0.right/48.27.1318.741@48.27.1318.741" timestamp="1577912029593" />
+    <state x="194" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1577824102587">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="192" y="31" key="SettingsEditor/47.27.1313.741@47.27.1313.741" timestamp="1577780436308" />
-    <state x="194" y="31" width="1022" height="737" key="SettingsEditor/48.27.1318.741@48.27.1318.741" timestamp="1577731503546" />
-    <state x="298" y="128" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1577799072374">
-      <screen x="47" y="27" width="1313" height="741" />
+    <state x="194" y="31" width="1022" height="737" key="SettingsEditor/48.27.1318.741@48.27.1318.741" timestamp="1577824102587" />
+    <state x="300" y="128" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1577911927956">
+      <screen x="48" y="27" width="1318" height="741" />
     </state>
     <state x="298" y="128" width="800" height="536" key="Vcs.Push.Dialog.v2/47.27.1313.741@47.27.1313.741" timestamp="1577799072374" />
-    <state x="300" y="128" width="800" height="543" key="Vcs.Push.Dialog.v2/48.27.1318.741@48.27.1318.741" timestamp="1577737371038" />
+    <state x="300" y="128" width="800" height="543" key="Vcs.Push.Dialog.v2/48.27.1318.741@48.27.1318.741" timestamp="1577911927956" />
+    <state x="381" y="173" width="642" height="456" key="git4idea.merge.GitPullDialog" timestamp="1577897685207">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="381" y="173" width="642" height="456" key="git4idea.merge.GitPullDialog/48.27.1318.741@48.27.1318.741" timestamp="1577897685207" />
+    <state x="449" y="243" width="506" height="316" key="git4idea.rebase.GitRebaseDialog" timestamp="1577911921129">
+      <screen x="48" y="27" width="1318" height="741" />
+    </state>
+    <state x="449" y="243" width="506" height="316" key="git4idea.rebase.GitRebaseDialog/48.27.1318.741@48.27.1318.741" timestamp="1577911921129" />
     <state x="432" y="282" width="540" height="237" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1577729998167">
       <screen x="48" y="27" width="1318" height="741" />
     </state>
@@ -292,6 +331,11 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/users/tests/test_urls.py</url>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../wakty_portal/wakty_portal/settings.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
