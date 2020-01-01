@@ -25,6 +25,8 @@ admin.autodiscover()
 
 
 urlpatterns = [
+    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+
     path('grappelli/', include('grappelli.urls')),  # grappelli URLS
 
     path('admin/', admin.site.urls),
@@ -33,7 +35,6 @@ urlpatterns = [
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    path("about/", TemplateView.as_view(template_name="pages/about.html"), name="about"),
     # path('api/v1/', include('.routers'), namespace='api_v1')
 ]
 

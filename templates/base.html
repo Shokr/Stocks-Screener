@@ -1,104 +1,259 @@
 {% load static i18n%}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}ERROR{% endblock title %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shokr</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicon.png' %}">
+    <!-- Custom Stylesheet -->
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/modernizr-3.6.0.min.js' %}"></script>
+</head>
 
-    <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
+<body>
 
-    {% block css %}
-    
-    <!-- Latest compiled and minified Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-
-
-    {% endblock %}
-
-  </head>
-
-  <body>
-
-    <div class="mb-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-{#        <a class="navbar-brand" href="{% url 'home' %}">ERORR</a>#}
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-{#              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>#}
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-{#                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{{ request.user }}</a>#}
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-{#                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>#}
-              </li>
-            {% else %}
-{#              <li class="nav-item">#}
-                {# URL provided by django-allauth/account/urls.py #}
-{#                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>#}
-{#              </li>#}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-{#                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>#}
-              </li>
-            {% endif %}
-          </ul>
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__bar"></div>
+            <div class="loader__ball"></div>
         </div>
-      </nav>
-
     </div>
 
-    <div class="container">
 
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
-          {% endfor %}
-      {% endif %}
+    <div id="main-wrapper">
+        <!-- header -->
+        <div class="header">
+            <div class="nav-header">
+                <div class="brand-logo">
+                    <a href="index.html">
+                        <i class="cc BTC"></i>
+                        <span class="brand-title">
+                            <img src="{% static 'assets/images/logo-text.png' %}" alt="">
+                        </span>
+                    </a>
+                </div>
 
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
 
-    </div> <!-- /container -->
+            <div class="header-content">
+                <div class="header-left">
+                    <ul>
+                        <li class="icons position-relative">
+                            <a href="javascript:void(0)">
+                                <i class="icon-magnifier f-s-16"></i>
+                            </a>
+                            <div class="drop-down animated bounceInDown">
+                                <div class="dropdown-content-body">
+                                    <div class="header-search" id="header-search">
+                                        <form action="#">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Search">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <i class="icon-magnifier"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
-    {% block modal %}{% endblock modal %}
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <li class="icons">
+                            <a href="javascript:void(0)">
+                                <i class="icon-user f-s-18" aria-hidden="true"></i>
+                            </a>
+                            <div class="drop-down dropdown-profile animated bounceInDown">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-settings"></i>
+                                                <span>Setting</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-lock"></i>
+                                                <span>Lock Screen</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-power"></i>
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #/ header -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
-      
-      <!-- Bootstrap JS and its dependencies-->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-      <!-- Your stuff: Third-party javascript libraries go here -->
+        <!-- sidebar -->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+
+                <div class="nav-user">
+                    <h5>John Doe</h5>
+                    <p>UI Developer</p>
+
+                </div>
+
+                <ul class="metismenu" id="menu">
+
+                    <li class="nav-label">Main</li>
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false">
+                            <i class="icon-speedometer"></i>
+                            <span class="nav-text">Dashboard</span>
+                            <span class="badge badge-danger nav-badge">10</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a href="index.html">Dashnoard 1</a>
+                            </li>
+                            <li>
+                                <a href="index2.html">Dashnoard 2</a>
+                            </li>
+                            <li>
+                                <a href="index3.html">Dashnoard 3</a>
+                            </li>
+                            <li>
+                                <a href="index4.html">Dashnoard 4</a>
+                            </li>
+                            <li>
+                                <a href="index5.html">Dashnoard 5</a>
+                            </li>
+                            <li>
+                                <a href="index6.html">Dashnoard 6</a>
+                            </li>
+                            <li>
+                                <a href="index7.html">Dashnoard 7</a>
+                            </li>
+                            <li>
+                                <a href="index8.html">Dashnoard 8</a>
+                            </li>
+                            <li>
+                                <a href="index9.html">Dashnoard 9</a>
+                            </li>
+                            <li>
+                                <a href="index10.html">Dashnoard 10</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-label">Crypto</li>
+
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false">
+                            <i class="icon-cursor"></i>
+                            <span class="nav-text">Cryptocurrency</span>
+                            <span class="badge badge-primary nav-badge">18</span>
+
+                        </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a href="ico-countdown.html">Countdown</a>
+                            </li>
+                            <li>
+                                <a href="ico-market-cap.html">Market Capitalization</a>
+                            </li>
+                            <li>
+                                <a href="ico-transaction.html">Transaction</a>
+                            </li>
+                            <li>
+                                <a href="ico-gainers-loosers.html">Gainers / Loosers</a>
+                            </li>
+                            <li>
+                                <a href="ico-timeline.html">Timeline</a>
+                            </li>
+                            <li>
+                                <a href="ico-progressbar.html">Progressbar</a>
+                            </li>
+                            <li>
+                                <a href="ico-exchange.html">Exchange</a>
+                            </li>
+                            <li>
+                                <a href="ico-advisor.html">Advisor</a>
+                            </li>
+                            <li>
+                                <a href="ico-advisor-profile.html">Advisor Profile</a>
+                            </li>
+                            <li>
+                                <a href="ico-counter.html">Counters</a>
+                            </li>
+                            <li>
+                                <a href="ico-trading-view.html">Trading View</a>
+                            </li>
+                            <li>
+                                <a href="ico-payment-gateway.html">Payment Gateway</a>
+                            </li>
+                            <li>
+                                <a href="ico-wallet.html">Wallet</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- #/ nk nav scroll -->
+        </div>
+        <!-- #/ sidebar -->
+
+        <!-- content body -->
+        <div class="content-body">
+            <!-- #/ container -->
+        </div>
+        <!-- #/ content body -->
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy;
+                    <a href="#">Muhammed Shokr</a> 2020</p>
+            </div>
+        </div>
+        <!-- #/ footer -->
+    </div>
 
 
-    {% endblock javascript %}
-  </body>
+    <!-- Common JS -->
+    <script src="{% static 'assets/plugins/common/common.min.js' %}"></script>
+
+    <!-- Custom script -->
+    <script src="{% static 'js/custom.min.js' %}"></script>
+
+
+{#    <script src="{% static 'js/dashboard-10.js' %}"></script>#}
+
+
+
+</body>
+
 </html>
- 
