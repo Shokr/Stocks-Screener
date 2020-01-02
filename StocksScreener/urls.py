@@ -30,12 +30,16 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),  # grappelli URLS
 
     path('admin/', admin.site.urls),
+
     path('users/', include('users.urls', namespace='users')),
+    path('users/api/v1/', include('users.api_urls', namespace='users_api')),
+
     path('market/', include('market.urls', namespace='market')),
+    path('market/api/v1/', include('market.api_urls', namespace='market_api')),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    # path('api/v1/', include('.routers'), namespace='api_v1')
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

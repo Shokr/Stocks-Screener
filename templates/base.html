@@ -62,23 +62,35 @@
 
                 <!-- Left -->
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link waves-effect" href="{% url 'home'%}">Home
-                            <span class="sr-only">(current)</span>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="{% url 'home' %}">Home
+{#                            <span class="sr-only">(current)</span>#}
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link waves-effect" href="{% url 'market:list_stocks'%}" target="_self">Market</a>
+                        <a class="nav-link waves-effect" href="{% url 'market:list_stocks' %}" target="_self">Market</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link waves-effect"
-                           href="{% url 'users:redirect'%}"
-                           target="_blank">{{ request.user }}</a>
+                        {% if request.user.pk %}
+                            <a class="nav-link waves-effect"
+                               href="{% url 'users:redirect' %}">{{ request.user }}</a>
+
+                            <li class="nav-item">
+                                <a href="{% url 'logout' %}" class="nav-link waves-effect">
+                                    logout
+                                </a>
+                            </li>
+                        {% else %}
+                            <a class="nav-link waves-effect"
+                               href="{% url 'login' %}">
+                                Login
+                            </a>
+                        {% endif %}
                     </li>
-{#                    <li class="nav-item">#}
-{#                        <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/"#}
-{#                           target="_blank">XX</a>#}
-{#                    </li>#}
+                    {#                    <li class="nav-item">#}
+                    {#                        <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/"#}
+                    {#                           target="_blank">XX</a>#}
+                    {#                    </li>#}
                 </ul>
 
                 <!-- Right -->
@@ -110,34 +122,34 @@
     <!-- Navbar -->
 
     <!-- Sidebar -->
-    <div class="sidebar-fixed position-fixed">
-
-        <a class="logo-wrapper waves-effect">
-            <img src="https://mdbootstrap.com/img/logo/mdb-email.png" class="img-fluid" alt="">
-        </a>
-
-        <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item active waves-effect">
-                <i class="fas fa-chart-pie mr-3"></i>Dashboard
-            </a>
-            <a href="#" class="list-group-item list-group-item-action waves-effect">
-                <i class="fas fa-user mr-3"></i>Profile</a>
-            <a href="#" class="list-group-item list-group-item-action waves-effect">
-                <i class="fas fa-table mr-3"></i>Tables</a>
-            <a href="#" class="list-group-item list-group-item-action waves-effect">
-                <i class="fas fa-map mr-3"></i>Maps</a>
-            <a href="#" class="list-group-item list-group-item-action waves-effect">
-                <i class="fas fa-money-bill-alt mr-3"></i>Orders</a>
-        </div>
-
-    </div>
+    {#    <div class="sidebar-fixed position-fixed">#}
+    {##}
+    {#        <a class="logo-wrapper waves-effect">#}
+    {#            <img src="https://mdbootstrap.com/img/logo/mdb-email.png" class="img-fluid" alt="">#}
+    {#        </a>#}
+    {##}
+    {#        <div class="list-group list-group-flush">#}
+    {#            <a href="#" class="list-group-item active waves-effect">#}
+    {#                <i class="fas fa-chart-pie mr-3"></i>Dashboard#}
+    {#            </a>#}
+    {#            <a href="#" class="list-group-item list-group-item-action waves-effect">#}
+    {#                <i class="fas fa-user mr-3"></i>Profile</a>#}
+    {#            <a href="#" class="list-group-item list-group-item-action waves-effect">#}
+    {#                <i class="fas fa-table mr-3"></i>Tables</a>#}
+    {#            <a href="#" class="list-group-item list-group-item-action waves-effect">#}
+    {#                <i class="fas fa-map mr-3"></i>Maps</a>#}
+    {#            <a href="#" class="list-group-item list-group-item-action waves-effect">#}
+    {#                <i class="fas fa-money-bill-alt mr-3"></i>Orders</a>#}
+    {#        </div>#}
+    {##}
+    {#    </div>#}
     <!-- Sidebar -->
 
 </header>
 <!--Main Navigation-->
 
 <!--Main layout-->
-<main class="pt-5 mx-lg-5">
+<main class="pt-5 mx-lg-12">
     <div class="container-fluid mt-5">
 
         <!-- Heading -->

@@ -9,10 +9,15 @@
 {% block card-body %}
     <h1>{{ stock.symbol }}</h1>
     <h5>{{ stock.sector }}</h5>
-{#    <ul>#}
-{#        <li>{{ stock.time_created }}</li>#}
-{#        <li>{{ stock.time_created }}</li>#}
-{#    </ul>#}
-{#    <br>#}
-{#    <textarea>{{ stock.info }}</textarea>#}
+
+{#    <div style="width:1000;height:100">#}
+{#        {{ graph_div|safe }}#}
+{#    </div>#}
+
+    {#    <ul>#}
+    {#        <li>{{ stock.time_created }}</li>#}
+    {#        <li>{{ stock.time_created }}</li>#}
+    {#    </ul>#}
+    {#    <br>#}
+    {#    <textarea>{{ stock.info }}</textarea>#}
 {% endblock card-body %}

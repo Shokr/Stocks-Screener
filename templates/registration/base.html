@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}Stocks Screener{% endblock title %}
+
+{% block card_header %}{% block head_title %}{% endblock head_title %}{% endblock card_header %}
+
+{% block card-body %}
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            {% block inner %}{% endblock %}
+        </div>
+    </div>
+{% endblock card-body %}
