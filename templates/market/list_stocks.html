@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
-{% load widget_tweaks %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+{% endblock extra_css %}
 
 {% block title %}list Stocks{% endblock %}
 
@@ -64,5 +68,5 @@
 {% endblock card-body %}
 
 {% block script %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
 {% endblock script %}

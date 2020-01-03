@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}View Stock{% endblock %}
 
 
@@ -70,6 +72,22 @@
         <!--/.Card-->
 
         <!--Card-->
+        <div class="card mb-4">
+
+            <!-- Card header -->
+            <div class="card-header text-center">
+                Chart
+            </div>
+
+            <!--Card content-->
+            <div class="card-body">
+
+                <canvas id="Chart"></canvas>
+
+            </div>
+
+        </div>
+        <!--/.Card-->
 
         <!--Card-->
         <div class="card mb-4">
@@ -112,26 +130,6 @@
         <!--/.Card-->
 
 
-        <!--/.Card-->
-
-{#        <!--Card-->#}
-{#        <div class="card mb-4">#}
-{##}
-{#            <!-- Card header -->#}
-{#            <div class="card-header text-center">#}
-{#                Chart#}
-{#            </div>#}
-{##}
-{#                        <!--Card content-->#}
-{#                        <div class="card-body">#}
-{##}
-{#                            <canvas id="lineChart"></canvas>#}
-{##}
-{#                        </div>#}
-{##}
-{#        </div>#}
-{#        <!--/.Card-->#}
-
     </div>
     <!--Grid column-->
 
@@ -162,7 +160,7 @@
 
                     let str =
                         '<a class="list-group-item list-group-item-action waves-effect" style="color: #0b2e13"> High: ' +
-                        '<span class="badge badge-success badge-pill pull-right">'+ high + ' ' +
+                        '<span class="badge badge-success badge-pill pull-right">' + high + ' ' +
                         '<i class="fas fa-arrow-up ml-1"></i>' +
                         '</span>' +
                         '</a>' +
@@ -245,6 +243,185 @@
             $('#xoxo').hide();
         }, 2000); // <-- time in milliseconds
 
+
+    </script>
+
+    <script type="text/javascript" src="{% static 'js/modules/chart.js' %}"></script>
+
+    <script>
+
+        $(function () {
+            $.ajax({
+                url: "{% url 'market_api:TimeSeries' stock.pk %}",
+                dataType: 'json',
+                contentType: "application/json",
+                success: function (data) {
+                    console.log(data);
+
+                    let dates = []
+                    let open = []
+                    let high = []
+                    let low = []
+                    let close = []
+                    let volume = []
+
+                    for (let time in data) {
+                        let info = data[time];
+                        dates.push(time)
+                        open.push(Number(info["1. open"]))
+                        high.push(Number(info["2. high"]))
+                        low.push(Number(info["3. low"]))
+                        close.push(Number(info["4. close"]))
+                        volume.push(Number(info["5. volume"]))
+                    }
+                    {#console.log(close)#}
+
+                    let ctx = document.getElementById("Chart").getContext('2d');
+                    let myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: data = {
+                            labels: [dates[0], dates[1], dates[2], dates[3], dates[4], dates[5], dates[6]],
+                            datasets: [
+                                {
+                                    type: 'line',
+                                    label: "Open",
+                                    fill: false,
+                                    yAxisID: 'y-axis-a',
+                                    lineTension: 0.1,
+                                    backgroundColor: 'rgb(75, 214, 238)',
+                                    borderColor: 'rgb(75, 214, 238)',
+                                    borderCapStyle: 'butt',
+                                    borderDash: [],
+                                    borderDashOffset: 0.0,
+                                    borderJoinStyle: 'miter',
+                                    pointBorderColor: 'rgb(75, 214, 238)',
+                                    pointBackgroundColor: 'rgb(75, 214, 238)',
+                                    pointBorderWidth: 1,
+                                    pointHoverRadius: 4,
+                                    pointHoverBackgroundColor: 'rgb(75, 214, 238)',
+                                    pointHoverBorderColor: 'rgb(75, 214, 238)',
+                                    pointHoverBorderWidth: 3,
+                                    pointRadius: 5,
+                                    pointHitRadius: 10,
+                                    data: [open[0], open[1], open[2], open[3], open[4], open[5], open[6]],
+                                },
+                                {
+                                    type: 'line',
+                                    label: "High",
+                                    fill: false,
+                                    yAxisID: 'y-axis-a',
+                                    lineTension: 0.1,
+                                    backgroundColor: 'rgb(210, 221, 72)',
+                                    borderColor: 'rgb(210, 221, 72)',
+                                    borderCapStyle: 'butt',
+                                    borderDash: [],
+                                    borderDashOffset: 0.0,
+                                    borderJoinStyle: 'miter',
+                                    pointBorderColor: 'rgb(210, 221, 72)',
+                                    pointBackgroundColor: 'rgb(210, 221, 72)',
+                                    pointBorderWidth: 1,
+                                    pointHoverRadius: 4,
+                                    pointHoverBackgroundColor: 'rgb(210, 221, 72)',
+                                    pointHoverBorderColor: 'rgb(210, 221, 72)',
+                                    pointHoverBorderWidth: 3,
+                                    pointRadius: 5,
+                                    pointHitRadius: 10,
+                                    data: [high[0], high[1], high[2], high[3], high[4], high[5], high[6]],
+                                },
+                                {
+                                    type: 'line',
+                                    label: "Low",
+                                    fill: false,
+                                    yAxisID: 'y-axis-a',
+                                    lineTension: 0.1,
+                                    backgroundColor: 'rgb(238, 79, 75)',
+                                    borderColor: 'rgb(238, 79, 75)',
+                                    borderCapStyle: 'butt',
+                                    borderDash: [],
+                                    borderDashOffset: 0.0,
+                                    borderJoinStyle: 'miter',
+                                    pointBorderColor: 'rgb(238, 79, 75)',
+                                    pointBackgroundColor: 'rgb(238, 79, 75)',
+                                    pointBorderWidth: 1,
+                                    pointHoverRadius: 4,
+                                    pointHoverBackgroundColor: 'rgb(238, 79, 75)',
+                                    pointHoverBorderColor: 'rgb(238, 79, 75)',
+                                    pointHoverBorderWidth: 3,
+                                    pointRadius: 5,
+                                    pointHitRadius: 10,
+                                    data: [low[0], low[1], low[2], low[3], low[4], low[5], low[6]],
+                                },
+                                {
+                                    type: 'line',
+                                    label: "Close",
+                                    fill: false,
+                                    yAxisID: 'y-axis-a',
+                                    lineTension: 0.1,
+                                    backgroundColor: 'rgb(28, 175, 154)',
+                                    borderColor: 'rgb(28, 175, 154)',
+                                    borderCapStyle: 'butt',
+                                    borderDash: [],
+                                    borderDashOffset: 0.0,
+                                    borderJoinStyle: 'miter',
+                                    pointBorderColor: 'rgb(28, 175, 154)',
+                                    pointBackgroundColor: 'rgb(28, 175, 154)',
+                                    pointBorderWidth: 1,
+                                    pointHoverRadius: 4,
+                                    pointHoverBackgroundColor: 'rgb(28, 175, 154)',
+                                    pointHoverBorderColor: 'rgb(28, 175, 154)',
+                                    pointHoverBorderWidth: 3,
+                                    pointRadius: 5,
+                                    pointHitRadius: 10,
+                                    data: [close[0], close[1], close[2], close[3], close[4], close[5], close[6]],
+                                },
+                                {
+                                    label: 'Volume', //1D2939
+                                    yAxisID: 'y-axis-b',
+                                    data: [volume[0], volume[1], volume[2], volume[3], volume[4], volume[5], volume[6]],
+                                    barPercentage: '1',
+                                    categoryPercentage: '1',
+                                    backgroundColor: 'rgb(29, 41, 57)',
+                                    borderColor: 'rgb(29, 41, 57)',
+                                    borderWidth: '1',
+                                    borderSkipped: 'bottom',
+                                    hoverBackgroundColor: 'rgb(29, 41, 57)',
+                                    hoverBorderColor: 'rgb(29, 41, 57)',
+                                    hoverBorderWidth: '3',
+                                },
+                            ]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Share Price - Past 7 Days',
+                                fontSize: '20',
+                                fontFamily: 'Open Sans, sans-serif',
+                                // fontColor
+                                // fontStyle
+                                // padding
+                                // lineHeight
+                            },
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        min: 0
+                                    }
+                                }],
+                                yAxes: [{
+                                    position: "left",
+                                    id: "y-axis-a",
+                                }, {
+                                    position: "right",
+                                    id: "y-axis-b",
+                                }]
+                            }
+                        }
+                    });
+
+
+                }
+            })
+        });
 
     </script>
 {% endblock script %}
