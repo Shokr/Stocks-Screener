@@ -16,25 +16,9 @@
     <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
 
     <!-- Your custom styles (optional) -->
-    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+{#    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">#}
 
-    <style>
 
-        .map-container {
-            overflow: hidden;
-            padding-bottom: 56.25%;
-            position: relative;
-            height: 0;
-        }
-
-        .map-container iframe {
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
-    </style>
     {% block extra_css %}
     {% endblock extra_css %}
 </head>
@@ -73,6 +57,9 @@
                         <a class="nav-link waves-effect" href="{% url 'market:list_stocks' %}" target="_self">Market</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link waves-effect" href="{% url 'market:sectors' %}" target="_blank">Sectors</a>
+                    </li>
+                    <li class="nav-item">
                         {% if request.user.pk %}
                             <a class="nav-link waves-effect"
                                href="{% url 'users:redirect' %}">{{ request.user }}</a>
@@ -89,10 +76,6 @@
                             </a>
                         {% endif %}
                     </li>
-                    {#                    <li class="nav-item">#}
-                    {#                        <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/"#}
-                    {#                           target="_blank">XX</a>#}
-                    {#                    </li>#}
                 </ul>
 
                 <!-- Right -->

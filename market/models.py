@@ -80,7 +80,7 @@ class Stock(SoftDeletionModel):
         verbose_name = 'Stock'
         verbose_name_plural = 'Stocks'
 
-        ordering = ('sector', 'name')
+        ordering = ['name']
 
     def save(self, *args, **kwargs):
         super(Stock, self).save(*args, **kwargs)

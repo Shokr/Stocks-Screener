@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %}Stock Monthly{% endblock %}
 
 
@@ -9,7 +11,7 @@
         <div class="card mb-4">
             <div class="card-body" id="xoxo">
                 <h5 class="mb-2 mb-sm-0 pt-1">
-                    <span>Please wait while data is loading ..</span>
+                    <span style="color: greenyellow">Please wait while data is loading ..</span>
                 </h5>
             </div>
         </div>
@@ -38,6 +40,24 @@
 {% block row %}
     <!--Grid column-->
     <div class="col-md-9 mb-4">
+
+        <!--Card-->
+        <div class="card mb-4">
+
+            <!-- Card header -->
+            <div class="card-header text-center">
+                Chart
+            </div>
+
+            <!--Card content-->
+            <div class="card-body">
+
+                <canvas id="Chart"></canvas>
+
+            </div>
+
+        </div>
+        <!--/.Card-->
 
         <!--Card-->
         <div class="card mb-4">
@@ -115,6 +135,8 @@
 {% endblock row %}
 
 {% block script %}
+    <script type="text/javascript" src="{% static 'js/modules/chart.js' %}"></script>
+
     <script>
         $(document).ready(function () {
 
@@ -192,6 +214,9 @@
                 success: function (data) {
                     console.log(data);
 
+                    let dates = [];
+                    let volume = [];
+
                     for (let time in data) {
                         let time_info = data[time];
                         let tr_str =
@@ -206,10 +231,67 @@
 
                         $("#timeseries").append(tr_str);
 
+                        // Fill lists
+                        dates.push(time);
+                        volume.push(Number(time_info["5. volume"]));
 
                     }
 
-                    //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                    //.......................... Chart ....................................................
+
+                    let ctx = document.getElementById("Chart").getContext('2d');
+                    let myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: data = {
+                            labels: [dates[0], dates[1], dates[2], dates[3], dates[4], dates[5], dates[6],
+                                dates[7], dates[8], dates[9], dates[10], dates[11]],
+                            datasets: [
+                                {
+                                    label: 'Volume',
+                                    yAxisID: 'y-axis-b',
+                                    data: [volume[0], volume[1], volume[2], volume[3], volume[4], volume[5], volume[6],
+                                        volume[7], volume[8], volume[9], volume[10], volume[11]],
+                                    barPercentage: '1',
+                                    categoryPercentage: '1',
+                                    backgroundColor: 'rgb(29, 41, 57)',
+                                    borderColor: 'rgb(29, 41, 57)',
+                                    borderWidth: '1',
+                                    borderSkipped: 'bottom',
+                                    hoverBackgroundColor: 'rgb(29, 41, 57)',
+                                    hoverBorderColor: 'rgb(29, 41, 57)',
+                                    hoverBorderWidth: '3',
+                                },
+                            ]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Stock Volumes - Last Year',
+                                fontSize: '20',
+                                fontFamily: 'Open Sans, sans-serif',
+                                // fontColor
+                                // fontStyle
+                                // padding
+                                // lineHeight
+                            },
+                            scales: {
+                                xAxes: [{
+                                    ticks: {
+                                        min: 0
+                                    }
+                                }],
+                                yAxes: [{
+                                    position: "left",
+                                    id: "y-axis-a",
+                                }, {
+                                    position: "right",
+                                    id: "y-axis-b",
+                                }]
+                            }
+                        }
+                    });
+
+                    //................................................................................
 
                 }
             })
@@ -220,8 +302,9 @@
 
         setTimeout(function () {
             $('#xoxo').hide();
-        }, 2000); // <-- time in milliseconds
+        }, 5000); // <-- time in milliseconds
 
 
     </script>
+
 {% endblock script %}

@@ -11,7 +11,7 @@
         <div class="card mb-4">
             <div class="card-body" id="xoxo">
                 <h5 class="mb-2 mb-sm-0 pt-1">
-                    <span>Please wait while data is loading ..</span>
+                    <span style="color: greenyellow">Please wait while data is loading ..</span>
                 </h5>
             </div>
         </div>
@@ -136,6 +136,8 @@
 {% endblock row %}
 
 {% block script %}
+    <script type="text/javascript" src="{% static 'js/modules/chart.js' %}"></script>
+
     <script>
         $(document).ready(function () {
 
@@ -213,6 +215,13 @@
                 success: function (data) {
                     console.log(data);
 
+                    let dates = [];
+                    let open = [];
+                    let high = [];
+                    let low = [];
+                    let close = [];
+                    let volume = [];
+
                     for (let time in data) {
                         let time_info = data[time];
                         let tr_str =
@@ -227,54 +236,17 @@
 
                         $("#timeseries").append(tr_str);
 
+                        // Fill lists
+                        dates.push(time);
+                        open.push(Number(time_info["1. open"]));
+                        high.push(Number(time_info["2. high"]));
+                        low.push(Number(time_info["3. low"]));
+                        close.push(Number(time_info["4. close"]));
+                        volume.push(Number(time_info["5. volume"]));
 
                     }
 
-                    //,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-
-                }
-            })
-            /////////////////////////////////////////////////////////////////////////////////
-
-        });
-
-
-        setTimeout(function () {
-            $('#xoxo').hide();
-        }, 2000); // <-- time in milliseconds
-
-
-    </script>
-
-    <script type="text/javascript" src="{% static 'js/modules/chart.js' %}"></script>
-
-    <script>
-
-        $(function () {
-            $.ajax({
-                url: "{% url 'market_api:TimeSeries' stock.pk %}",
-                dataType: 'json',
-                contentType: "application/json",
-                success: function (data) {
-                    console.log(data);
-
-                    let dates = []
-                    let open = []
-                    let high = []
-                    let low = []
-                    let close = []
-                    let volume = []
-
-                    for (let time in data) {
-                        let info = data[time];
-                        dates.push(time)
-                        open.push(Number(info["1. open"]))
-                        high.push(Number(info["2. high"]))
-                        low.push(Number(info["3. low"]))
-                        close.push(Number(info["4. close"]))
-                        volume.push(Number(info["5. volume"]))
-                    }
-                    {#console.log(close)#}
+                    //.......................... Chart ....................................................
 
                     let ctx = document.getElementById("Chart").getContext('2d');
                     let myChart = new Chart(ctx, {
@@ -418,10 +390,20 @@
                         }
                     });
 
+                    //................................................................................
 
                 }
             })
+            /////////////////////////////////////////////////////////////////////////////////
+
         });
 
+
+        setTimeout(function () {
+            $('#xoxo').hide();
+        }, 4000); // <-- time in milliseconds
+
+
     </script>
+
 {% endblock script %}
