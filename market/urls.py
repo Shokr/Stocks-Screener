@@ -11,6 +11,9 @@ urlpatterns = [
     path('delete/<int:pk>', delete_stock, name='delete_stock'),
     path('<int:pk>', view_stock, name='view_stock'),
 
-    path('chart/', testing, name='test'),
+    path('stock_weekly/<int:pk>', view_stock_weekly, name='view_stock_weekly'),
+    path('stock_monthly/<int:pk>', view_stock_monthly, name='view_stock_monthly'),
+
+    path('sectors', sectors, name='sectors'),
 
 ]

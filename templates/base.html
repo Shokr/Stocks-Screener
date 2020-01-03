@@ -64,7 +64,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link waves-effect" href="{% url 'home' %}">Home
-{#                            <span class="sr-only">(current)</span>#}
+                            {#                            <span class="sr-only">(current)</span>#}
                         </a>
                     </li>
                     <li class="nav-item">
@@ -152,12 +152,15 @@
 <main class="pt-5 mx-lg-12">
     <div class="container-fluid mt-5">
 
-        <!-- Heading -->
-        <div class="card mb-4 wow fadeIn">
-            {% block heading %}
-            {% endblock heading %}
-        </div>
-        <!-- Heading -->
+        {% block top_heading %}
+
+            <!-- Heading -->
+            <div class="card mb-4 wow fadeIn">
+                {% block heading %}
+                {% endblock heading %}
+            </div>
+            <!-- Heading -->
+        {% endblock top_heading %}
 
         <!--Grid row-->
         <div class="row wow fadeIn">

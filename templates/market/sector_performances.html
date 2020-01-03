@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Sectors{% endblock %}
+
+{% block heading %}
+
+    <h4 class="mb-2 mb-sm-0 pt-1" id="xoxo">
+        <span>Wait a Sec..</span>
+    </h4>
+
+{% endblock heading %}
+
+{% block row %}
+
+    <!--Grid column-->
+    <div class="col-md-12 mb-4">
+        {% block col %}
+
+            <table class="table table-hover md-sm-10">
+                <!-- Table head -->
+                <thead class="rgba-green-light lighten-4">
+                <tr>
+                    <th>Rank</th>
+                    <th>Real Estate</th>
+                    <th>Utilities</th>
+                    <th>Consumer Staples</th>
+                    <th>Communication Services</th>
+                    <th>Health Care</th>
+                    <th>Energy</th>
+                    <th>Industrials</th>
+                    <th>Information Technology</th>
+                    <th>Consumer Discretionary</th>
+                    <th>Financials</th>
+                    <th>Materials</th>
+                </tr>
+                </thead>
+                <!-- Table head -->
+
+                <!-- Table body -->
+                <tbody id="sectorx">
+
+                </tbody>
+                <!-- Table body -->
+            </table>
+            <!-- Table  -->
+
+        {% endblock col %}
+    </div>
+    <!--Grid column-->
+{% endblock row %}
+
+
+{% block script %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "{% url 'market_api:SectorPerformances'%}",
+                dataType: 'json',
+                contentType: "application/json",
+                success: function (data) {
+                    console.log(data);
+
+                    for (let rank in data) {
+                        let performance_info = data[rank];
+                        let tr_str =
+                            '<tr>' +
+                            '<td scope="row" style="background-color: #9a9b9a">' + rank + '</td>' +
+                            '<td>' + Number(performance_info["Real Estate"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Utilities"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Consumer Staples"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Communication Services"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Health Care"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Energy"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Industrials"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Information Technology"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Consumer Discretionary"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Financials"]).toFixed(4) + '</td>' +
+                            '<td>' + Number(performance_info["Materials"]).toFixed(4) + '</td>' +
+                            '</tr>';
+
+                        $("#sectorx").append(tr_str);
+
+
+                    }
+
+                }
+
+            })
+
+        });
+
+        setTimeout(function () {
+            $('#xoxo').hide();
+        }, 4000); // <-- time in milliseconds
+
+
+    </script>
+{% endblock script %}
