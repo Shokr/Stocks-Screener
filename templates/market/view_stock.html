@@ -4,6 +4,14 @@
 
 {% block title %}View Stock{% endblock %}
 
+
+{% block heading %}
+    <!--Card content-->
+    <h5 class="mb-2 mb-sm-0 pt-1" id="xoxo">
+        <span>Please wait while data is loading ..</span>
+    </h5>
+{% endblock heading %}
+
 {% block row %}
 
     <!--Grid column-->
@@ -14,13 +22,24 @@
 
             <!-- Card header -->
             <div class="card-header text-center">
-                Pie chart
+                Stock Info
             </div>
 
             <!--Card content-->
             <div class="card-body">
 
-                <dev id="testo"></dev>
+                <!-- List group links -->
+                <div class="list-group list-group-flush" id="info">
+                    <a class="list-group-item list-group-item-action waves-effect">{{ stock.name }}
+                    </a>
+                    <a class="list-group-item list-group-item-action waves-effect">
+                        <span class="badge badge-primary badge-pill pull-right">{{ stock.symbol }}</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action waves-effect">
+                        <span class="badge badge-warning badge-pill pull-right">{{ stock.sector }}</span>
+                    </a>
+                </div>
+                <!-- List group links -->
 
             </div>
 
@@ -30,31 +49,15 @@
         <!--Card-->
         <div class="card mb-4">
 
+            <!-- Card header -->
+            <div class="card-header text-center">
+                Chart
+            </div>
+
             <!--Card content-->
             <div class="card-body">
 
-                <!-- List group links -->
-                <div class="list-group list-group-flush" id="info">
-                    {#                                        <a class="list-group-item list-group-item-action waves-effect">Sales#}
-                    {#                                            <span class="badge badge-success badge-pill pull-right">22%#}
-                    {#                                        <i class="fas fa-arrow-up ml-1"></i>#}
-                    {#                                      </span>#}
-                    {#                                        </a>#}
-                    {#                                        <a class="list-group-item list-group-item-action waves-effect">Traffic#}
-                    {#                                            <span class="badge badge-danger badge-pill pull-right">5%#}
-                    {#                                        <i class="fas fa-arrow-down ml-1"></i>#}
-                    {#                                      </span>#}
-                    {#                                        </a>#}
-                    <a class="list-group-item list-group-item-action waves-effect">{{ stock.name }}
-                    </a>
-                    <a class="list-group-item list-group-item-action waves-effect">
-                        <span class="badge badge-primary badge-pill pull-right">{{ stock.symbol }}</span>
-                    </a>
-                    <a class="list-group-item list-group-item-action waves-effect">
-                        <span class="badge badge-success badge-pill pull-right">{{ stock.sector }}</span>
-                    </a>
-                </div>
-                <!-- List group links -->
+                <dev id="testo"></dev>
 
             </div>
 
@@ -82,18 +85,53 @@
                     let high = response["03. high"];
                     let low = response["04. low"];
                     let price = response["05. price"];
-                    let volume = response[" 06. volume"];
+                    let volume = response["06. volume"];
                     let latest = response["07. latest trading day"];
-                    let close = response["08. previous close:"];
+                    let close = response["08. previous close"];
                     let change = response["09. change"];
                     let change_percent = response["10. change percent"];
 
 
                     let str =
-                        "<td align='center'>" + (i + 1) + "</td>" +
-                        "<td align='center'>" + username + "</td>" +
-                        "<td align='center'>" + name + "</td>" +
-                        "<td align='center'>" + email + "</td>" +
+                        '<a class="list-group-item list-group-item-action waves-effect" style="color: #0b2e13"> High: ' + high + ' ' +
+                        '<span class="badge badge-success badge-pill pull-right">' +
+                        '<i class="fas fa-arrow-up ml-1"></i>' +
+                        '</span>' +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect" style="color: #9f105c"> Low: ' + low + ' ' +
+                        '<span class="badge badge-danger badge-pill pull-right">' +
+                        '<i class="fas fa-arrow-down ml-1"></i>' +
+                        '</span>' +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect" style="color: #0b2e13"> Open: ' +
+                        open +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect" style="color: #b21f2d"> Close: ' +
+                        close +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect" style="color: #1b451d"> Price: ' +
+                        price +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect" style="color: #2c0419"> Volume: ' +
+                        volume +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect" style="color: #5b32bc"> Latest trading day: ' +
+                        latest +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect"> Change: ' +
+                        change +
+                        '</a>' +
+
+                        '<a class="list-group-item list-group-item-action waves-effect"> Change %: ' +
+                        change_percent +
+                        '</a>'
                     ;
 
                     $("#info").append(str);
@@ -101,5 +139,10 @@
             })
 
         });
+
+
+        setTimeout(function () {
+            $('#xoxo').hide();
+        }, 2000); // <-- time in milliseconds
     </script>
 {% endblock script %}
