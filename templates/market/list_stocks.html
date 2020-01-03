@@ -4,6 +4,23 @@
 
 {% block title %}list Stocks{% endblock %}
 
+{% block heading %}
+    <!--Card content-->
+    <div class="card-body d-sm-flex justify-content-between">
+
+        <h4 class="mb-2 mb-sm-0 pt-1">
+            <span>Add New Stock</span>
+        </h4>
+
+        <form class="d-flex justify-content-center">
+            <a href="{% url 'market:create_stock' %}" class="btn btn-primary">
+                <i class="fas fa-plus"></i>
+            </a>
+        </form>
+
+    </div>
+{% endblock heading %}
+
 {% block card_header %}Stocks{% endblock card_header %}
 
 {% block card-body %}

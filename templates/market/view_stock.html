@@ -4,20 +4,102 @@
 
 {% block title %}View Stock{% endblock %}
 
-{% block card_header %}{{ stock.name }}{% endblock card_header %}
+{% block row %}
 
-{% block card-body %}
-    <h1>{{ stock.symbol }}</h1>
-    <h5>{{ stock.sector }}</h5>
+    <!--Grid column-->
+    <div class="col-md-9 mb-4">
 
-{#    <div style="width:1000;height:100">#}
-{#        {{ graph_div|safe }}#}
-{#    </div>#}
+        <!--Card-->
+        <div class="card mb-4">
 
-    {#    <ul>#}
-    {#        <li>{{ stock.time_created }}</li>#}
-    {#        <li>{{ stock.time_created }}</li>#}
-    {#    </ul>#}
-    {#    <br>#}
-    {#    <textarea>{{ stock.info }}</textarea>#}
-{% endblock card-body %}
+            <!-- Card header -->
+            <div class="card-header text-center">
+                Pie chart
+            </div>
+
+            <!--Card content-->
+            <div class="card-body">
+
+                <dev id="testo"></dev>
+
+            </div>
+
+        </div>
+        <!--/.Card-->
+
+        <!--Card-->
+        <div class="card mb-4">
+
+            <!--Card content-->
+            <div class="card-body">
+
+                <!-- List group links -->
+                <div class="list-group list-group-flush" id="info">
+                    {#                                        <a class="list-group-item list-group-item-action waves-effect">Sales#}
+                    {#                                            <span class="badge badge-success badge-pill pull-right">22%#}
+                    {#                                        <i class="fas fa-arrow-up ml-1"></i>#}
+                    {#                                      </span>#}
+                    {#                                        </a>#}
+                    {#                                        <a class="list-group-item list-group-item-action waves-effect">Traffic#}
+                    {#                                            <span class="badge badge-danger badge-pill pull-right">5%#}
+                    {#                                        <i class="fas fa-arrow-down ml-1"></i>#}
+                    {#                                      </span>#}
+                    {#                                        </a>#}
+                    <a class="list-group-item list-group-item-action waves-effect">{{ stock.name }}
+                    </a>
+                    <a class="list-group-item list-group-item-action waves-effect">
+                        <span class="badge badge-primary badge-pill pull-right">{{ stock.symbol }}</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action waves-effect">
+                        <span class="badge badge-success badge-pill pull-right">{{ stock.sector }}</span>
+                    </a>
+                </div>
+                <!-- List group links -->
+
+            </div>
+
+        </div>
+        <!--/.Card-->
+
+    </div>
+    <!--Grid column-->
+
+{% endblock row %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+
+            $.ajax({
+                url: "{% url 'market_api:StockQuote' stock.pk %}",
+                type: "get",
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    // response is form in html format
+                    let symbol = response["01. symbol"];
+                    let open = response["02. open"];
+                    let high = response["03. high"];
+                    let low = response["04. low"];
+                    let price = response["05. price"];
+                    let volume = response[" 06. volume"];
+                    let latest = response["07. latest trading day"];
+                    let close = response["08. previous close:"];
+                    let change = response["09. change"];
+                    let change_percent = response["10. change percent"];
+
+
+                    let str =
+                        "<td align='center'>" + (i + 1) + "</td>" +
+                        "<td align='center'>" + username + "</td>" +
+                        "<td align='center'>" + name + "</td>" +
+                        "<td align='center'>" + email + "</td>" +
+                    ;
+
+                    $("#info").append(str);
+                }
+            })
+
+        });
+    </script>
+{% endblock script %}
