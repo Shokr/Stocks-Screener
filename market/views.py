@@ -41,7 +41,7 @@ def view_stock(request, pk):
 
 @login_required
 def list_stocks(request):
-    stocks = Stock.objects.get_queryset()
+    stocks = Stock.objects.get_queryset().exclude(symbol=None)
     return render(request, 'market/list_stocks.html', {'stocks': stocks})
 
 
