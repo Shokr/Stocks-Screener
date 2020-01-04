@@ -61,7 +61,7 @@ class SoftDeletionModel(Model):
 ######################################################################################################
 class Stock(SoftDeletionModel):
 
-    symbol = CharField(db_column='Symbol', max_length=10, db_index=True)
+    symbol = CharField(db_column='Symbol', max_length=10, db_index=True, unique=True)
     name = CharField(db_column='Name', max_length=100, db_index=True)
     sector = CharField(db_column='Sector', max_length=45, blank=True, null=True)
 

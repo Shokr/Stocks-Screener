@@ -15,7 +15,7 @@ class StockAdmin(admin.ModelAdmin):
         'sector',
     )
 
-    readonly_fields = ('time_created', 'time_modified', 'time_deleted', 'deleted')
+    readonly_fields = ('time_created', 'time_modified', 'time_deleted', 'deleted', 'creator')
 
     fieldsets = (
         ('Stock Data', {
@@ -28,6 +28,12 @@ class StockAdmin(admin.ModelAdmin):
             'fields': ('time_created', 'time_modified', 'time_deleted')
         }),
     )
+
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:
+            # Only set added_by during the first save.
+            obj.creator = request.user
+        super().save_model(request, obj, form, change)
 
 
 admin.site.register(Stock, StockAdmin)
