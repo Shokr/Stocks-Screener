@@ -51,7 +51,6 @@ user_redirect_view = UserRedirectView.as_view()
 
 #######################################################################################################################
 #
-#
 # @login_required
 # def users(request):
 #     users_count = User.objects.get_queryset().count()

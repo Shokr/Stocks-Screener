@@ -4,6 +4,19 @@
 
 {% block title %}Add Stock{% endblock %}
 
+{% block top_heading %}
+    {% if created_stock_pk %}
+        <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-check"></i> {{ note }} </h4>
+            <h2><a href="{% url 'market:update_stock' created_stock_pk %}">Edit Stock</a></h2>
+            <h6><a href="{% url 'market:list_stocks' %}">Stocks</a></h6>
+        </div>
+    {% endif %}
+
+{% endblock top_heading %}
+
+
 {% block card_header %}Add Stock{% endblock card_header %}
 
 {% block card-body %}

@@ -7,14 +7,20 @@ from .forms import *
 @login_required
 def create_stock(request):
     if request.method == 'POST':
-        filled_form = StockForm(request.POST, request.FILES)
+        created_stock_pk = None
+        filled_form = StockForm(request.POST)
         if filled_form.is_valid():
             created_stock = filled_form.save()
+            created_stock_pk = created_stock.pk
+            note = 'stock %s was created' % (filled_form.cleaned_data['name'])
             filled_form = StockForm()
         else:
-            new_form = StockForm()
+            note = 'stock was not created, please try again'
+        new_form = StockForm()
 
-        return redirect('market:list_stocks')
+        return render(request, 'market/add_stock.html',
+                      {'StockForm': filled_form, 'note': note, 'created_stock_pk': created_stock_pk})
+        # return redirect('market:list_stocks')
     else:
         form = StockForm()
         return render(request, 'market/add_stock.html', {'StockForm': form})
@@ -25,11 +31,13 @@ def update_stock(request, pk):
     stock = Stock.objects.get(pk=pk)
     form = StockForm(instance=stock)
     if request.method == 'POST':
-        filled_form = StockForm(request.POST, request.FILES, instance=stock)
+        filled_form = StockForm(request.POST, instance=stock)
         if filled_form.is_valid():
             filled_form.save()
             form = filled_form
-            return redirect('market:list_stocks')
+            note = 'Your stock has been processed.'
+            return render(request, 'market/edit_stock.html', {'StockForm': form, 'stock': stock, 'note': note})
+            # return redirect('market:list_stocks')
     return render(request, 'market/edit_stock.html', {'StockForm': form, 'stock': stock})
 
 
