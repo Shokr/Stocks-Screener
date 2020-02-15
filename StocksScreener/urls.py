@@ -20,9 +20,9 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+from rest_framework.authtoken.views import obtain_auth_token
 
 admin.autodiscover()
-
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
@@ -40,6 +40,18 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     path('accounts/', include('django.contrib.auth.urls')),
+
+    # path('crypto/', include('crypto.urls', namespace='crypto')),
+    path('forex/', include('forex.urls', namespace='forex')),
+
+]
+
+# API URLS
+urlpatterns += [
+    # API base url
+    path("api/", include("StocksScreener.api_router")),
+    # DRF auth token
+    path("auth-token/", obtain_auth_token),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

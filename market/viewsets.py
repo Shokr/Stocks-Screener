@@ -1,6 +1,6 @@
 # from rest_framework.urlpatterns import format_suffix_patterns
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework import permissions
+from rest_framework import permissions, viewsets
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.parsers import JSONParser
@@ -10,6 +10,13 @@ from StocksScreener.settings import AlphaVantagekey as key
 from .serializers import *
 
 
+@permission_classes((permissions.IsAuthenticated,))
+class StockViewSet(viewsets.ModelViewSet):
+    queryset = Stock.objects.all()
+    serializer_class = StockSerializer
+
+
+####################################################################################################################3
 @csrf_exempt
 @api_view(['GET', 'POST'])
 @permission_classes((permissions.IsAuthenticated,))

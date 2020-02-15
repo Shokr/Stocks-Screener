@@ -81,6 +81,7 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "django_filters",
     "django_extensions",
+    "django_celery_beat",
 ]
 
 LOCAL_APPS = [
@@ -88,6 +89,8 @@ LOCAL_APPS = [
 
     'market.apps.MarketConfig',
     'users.apps.UsersConfig',
+    'crypto.apps.CryptoApiConfig',
+    'forex.apps.ForexApiConfig',
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -103,6 +106,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 
 # ------------------------------------------------------------------------------
@@ -220,32 +225,7 @@ CSRF_COOKIE_HTTPONLY = True
 SECURE_BROWSER_XSS_FILTER = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#x-frame-options
 X_FRAME_OPTIONS = "DENY"
-#
-# # ------------------------------------------------------------------------------
-# # https://docs.djangoproject.com/en/dev/ref/settings/#secure-proxy-ssl-header
-# SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-# # https://docs.djangoproject.com/en/dev/ref/settings/#secure-ssl-redirect
-# SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
-# # https://docs.djangoproject.com/en/dev/ref/settings/#session-cookie-secure
-# SESSION_COOKIE_SECURE = True
-# # https://docs.djangoproject.com/en/dev/ref/settings/#csrf-cookie-secure
-# CSRF_COOKIE_SECURE = True
-# # https://docs.djangoproject.com/en/dev/topics/security/#ssl-https
-# # https://docs.djangoproject.com/en/dev/ref/settings/#secure-hsts-seconds
-# #
-# SECURE_HSTS_SECONDS = 60
-# # https://docs.djangoproject.com/en/dev/ref/settings/#secure-hsts-include-subdomains
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = env.bool(
-#     "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS", default=True
-# )
-# # https://docs.djangoproject.com/en/dev/ref/settings/#secure-hsts-preload
-# SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
-# # https://docs.djangoproject.com/en/dev/ref/middleware/#x-content-type-options-nosniff
-# SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
-#     "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF", default=True
-# )
-# # ------------------------------------------------------------------------------
-#
+
 
 # REST_FRAMEWORK
 # ------------------------------------------------------------------------------
@@ -315,6 +295,38 @@ LOGGING = {
 #     'all_applications': True,
 #     'group_models': True,
 # }
+
+
+# Celery
+# ------------------------------------------------------------------------------
+if USE_TZ:
+    # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-timezone
+    CELERY_TIMEZONE = TIME_ZONE
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-broker_url
+CELERY_BROKER_URL = "amqp://localhost/"
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-result_backend
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-accept_content
+CELERY_ACCEPT_CONTENT = ["json"]
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-task_serializer
+CELERY_TASK_SERIALIZER = "json"
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-result_serializer
+CELERY_RESULT_SERIALIZER = "json"
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-time-limit
+# TODO: set to whatever value is adequate in your circumstances
+CELERY_TASK_TIME_LIMIT = 5 * 60
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-soft-time-limit
+# TODO: set to whatever value is adequate in your circumstances
+CELERY_TASK_SOFT_TIME_LIMIT = 60
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#beat-scheduler
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
+
+# Celery
+# ------------------------------------------------------------------------------
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-always-eager
+CELERY_TASK_ALWAYS_EAGER = True
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-eager-propagates
+CELERY_TASK_EAGER_PROPAGATES = True
 
 # # django-debug-toolbar
 # #####################################################################################################################
