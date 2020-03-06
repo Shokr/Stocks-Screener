@@ -76,7 +76,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "crispy_forms",
     "widget_tweaks",
-
+    'schema_graph',
     "rest_framework",
     "corsheaders",
     "django_filters",
@@ -91,6 +91,7 @@ LOCAL_APPS = [
     'users.apps.UsersConfig',
     'crypto.apps.CryptoApiConfig',
     'forex.apps.ForexApiConfig',
+    'egx.apps.EgxConfig',
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

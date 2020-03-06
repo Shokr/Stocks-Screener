@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+{% endblock extra_css %}
+
+{% block title %}EGX companies{% endblock %}
+
+{% block heading %}
+{% endblock heading %}
+
+{% block card_header %} الشركـات المدرجـة بالبـــورصة المصريــة {% endblock card_header %}
+
+{% block card-body %}
+
+    <table id="table" data-toggle="table" data-pagination="true"
+           data-search="true" data-show-columns="true"
+           data-show-toggle="true" data-resizable="true" data-toolbar="#toolbar" class="rtl">
+        <thead>
+        <tr>
+
+            <th data-field="code">الرمز</th>
+            <th data-field="price">السعر</th>
+            <th data-field="sector">القطاع</th>
+            <th data-field="name">السهم</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for company in companies %}
+            <tr>
+                <td>{{ company.symbol }}</td>
+                <td>{{ company.price }}</td>
+                <td>{{ company.sector }}</td>
+                <td>{{ company.name }}</td>
+            </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+
+{% endblock card-body %}
+
+{% block script %}
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+{% endblock script %}

@@ -16,7 +16,7 @@
     <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
 
     <!-- Your custom styles (optional) -->
-{#    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">#}
+    {#    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">#}
 
 
     {% block extra_css %}
@@ -59,6 +59,11 @@
                     <li class="nav-item">
                         <a class="nav-link waves-effect" href="{% url 'market:sectors' %}" target="_blank">Sectors</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="{% url 'egx:home' %}" target="_blank">EGX</a>
+                    </li>
+
                     <li class="nav-item">
                         {% if request.user.pk %}
                             <a class="nav-link waves-effect"

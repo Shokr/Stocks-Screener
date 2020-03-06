@@ -22,6 +22,9 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
+from schema_graph.views import Schema
+
+
 admin.autodiscover()
 
 urlpatterns = [
@@ -41,8 +44,10 @@ urlpatterns = [
 
     path('accounts/', include('django.contrib.auth.urls')),
 
+    path('egx/', include('egx.urls', namespace='egx')),
+
     # path('crypto/', include('crypto.urls', namespace='crypto')),
-    path('forex/', include('forex.urls', namespace='forex')),
+    # path('forex/', include('forex.urls', namespace='forex')),
 
 ]
 
@@ -52,6 +57,11 @@ urlpatterns += [
     path("api/", include("StocksScreener.api_router")),
     # DRF auth token
     path("auth-token/", obtain_auth_token),
+]
+
+
+urlpatterns += [
+    path("schema/", Schema.as_view()),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

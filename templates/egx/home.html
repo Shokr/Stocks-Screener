@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+{% endblock extra_css %}
+
+{% block title %}EGX Stocks{% endblock %}
+
+{% block heading %}
+    <!--Card content-->
+    <div class="card-body d-sm-flex justify-content-between">
+
+        <h4 class="mb-2 mb-sm-0 pt-1">
+            <span class="danger-color"> Last Update:</span>
+            <span class="info-color">{{ lastUpdate }}</span>
+        </h4>
+
+        <h5>
+            <a class="btn btn-black waves-effect waves-light" href="{% url 'egx:companies' %}" target="_blank">EGX
+                Companies</a>
+        </h5>
+
+    </div>
+{% endblock heading %}
+
+{% block card_header %} EGX {% endblock card_header %}
+
+{% block card-body %}
+
+    <table id="table" data-toggle="table" data-pagination="true"
+           data-search="true" data-show-columns="true"
+           data-show-toggle="true" data-resizable="true" data-toolbar="#toolbar">
+        <thead>
+        <tr>
+
+            <th data-field="code">الرمز</th>
+            <th data-field="value" data-editable="true">آخر سعر</th>
+            <th data-field="change" data-editable="true">التغير</th>
+            <th data-field="changePercentage">نسبة التغير</th>
+            <th data-field="turnover">القيمة</th>
+            <th data-field="volume">الكمية</th>
+            <th data-field="open">سعر الفتح</th>
+            <th data-field="high">أعلى سعر</th>
+            <th data-field="low">أقل سعر</th>
+            <th data-field="updatedAt">آخر تحديث</th>
+            <th data-field="name">السهم</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+
+        {% for price in prices %}
+
+            <tr>
+                <td>{{ price.code }}</td>
+                <td>{{ price.value }}</td>
+                {% if price.status == 'up' %}
+                    <td class="success-color">{{ price.change }}</td>
+                {% else %}
+                    <td class="danger-color">{{ price.change }}</td>
+                {% endif %}
+                <td>{{ price.changePercentage }}</td>
+                <td>{{ price.turnover }}</td>
+                <td>{{ price.volume }}</td>
+                <td>{{ price.open }}</td>
+                <td>{{ price.high }}</td>
+                <td>{{ price.low }}</td>
+                <td>{{ price.updatedAt }}</td>
+                <td>{{ price.name }}</td>
+            </tr>
+
+        {% endfor %}
+
+
+        </tbody>
+    </table>
+
+{% endblock card-body %}
+
+{% block script %}
+    <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+{% endblock script %}
