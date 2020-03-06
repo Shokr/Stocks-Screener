@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .froms import *
+from crypto.froms import Cryptocurrency
 
 # Register your models here.
 

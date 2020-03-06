@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import *
+from egx.views import home, companies
 
 app_name = "egx"
 

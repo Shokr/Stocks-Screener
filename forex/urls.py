@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import *
+from forex.views import *
 
 app_name = 'forex'
 

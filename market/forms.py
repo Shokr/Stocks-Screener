@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import *
+from market.models import Stock
 
 
 class StockForm(forms.ModelForm):

@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from celery.schedules import crontab
 from celery.task import periodic_task
 
-from .models import *
+from crypto.models import Cryptocurrency
 
 
 # @shared_task

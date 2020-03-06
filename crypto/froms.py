@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import *
+from crypto.models import Cryptocurrency
 
 
 class CryptocurrencyForm(forms.ModelForm):

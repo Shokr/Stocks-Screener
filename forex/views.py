@@ -1,6 +1,6 @@
 from rest_framework import generics
 
-from .serializers import *
+from forex.serializers import Currency, CurrencySerializer
 
 
 # Create your views here.

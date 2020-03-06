@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .viewsets import *
+from market.viewsets import *
 
 app_name = "market"
 

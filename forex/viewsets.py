@@ -1,7 +1,7 @@
 from rest_framework import viewsets, permissions
 from rest_framework.decorators import permission_classes
 
-from .serializers import *
+from forex.serializers import Currency, CurrencySerializer
 
 
 @permission_classes((permissions.AllowAny,))

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .forms import *
+from market.forms import Stock, StockForm
 
 
 class StockAdmin(admin.ModelAdmin):

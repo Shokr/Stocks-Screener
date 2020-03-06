@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import *
+from forex.models import Currency
 
 
 class CurrencyForm(forms.ModelForm):

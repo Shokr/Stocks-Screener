@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .froms import *
+from forex.froms import Currency
 
 # Register your models here.
 
