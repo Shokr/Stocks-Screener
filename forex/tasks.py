@@ -2,13 +2,17 @@ from time import sleep
 from urllib.request import urlopen, Request
 
 from bs4 import BeautifulSoup
-from celery import shared_task
+from celery.schedules import crontab
+from celery.task import periodic_task
 
 from .models import *
 
 
-@shared_task
-# some heavy stuff here
+# @shared_task
+@periodic_task(
+    run_every=(crontab(minute='*/15')),
+    name="create_currency",
+)
 def create_currency():
     print('Creating forex data ..')
     req = Request('https://www.investing.com/currencies/single-currency-crosses', headers={'User-Agent': 'Mozilla/5.0'})
@@ -39,8 +43,11 @@ def create_currency():
         sleep(5)
 
 
-@shared_task
-# some heavy stuff here
+# @shared_task
+@periodic_task(
+    run_every=(crontab(minute='*/15')),
+    name="update_currency",
+)
 def update_currency():
     print('Updating forex data ..')
     req = Request('https://www.investing.com/currencies/single-currency-crosses', headers={'User-Agent': 'Mozilla/5.0'})
@@ -66,9 +73,9 @@ def update_currency():
         sleep(5)
 
 
-if not Currency.objects.all():
-    create_currency()
-
-while True:
-    sleep(15)
-    update_currency()
+# if not Currency.objects.all():
+#     create_currency()
+#
+# while True:
+#     sleep(15)
+#     update_currency()

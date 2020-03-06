@@ -12,7 +12,7 @@ from .models import *
 @periodic_task(
     run_every=(crontab(minute='*/15')),
     name="create_cryptocurrency",
-    ignore_result=True
+    # ignore_result=True
 )
 def create_cryptocurrency():
     print('Crawling data and creating objects in database ..')
@@ -38,7 +38,6 @@ def create_cryptocurrency():
 @periodic_task(
     run_every=(crontab(minute='*/15')),
     name="update_cryptocurrency",
-    ignore_result=True
 )
 def update_cryptocurrency():
     print('Updating data ..')
@@ -60,9 +59,10 @@ def update_cryptocurrency():
         sleep(3)
 
 
-if not Cryptocurrency.objects.all():
-    create_cryptocurrency()
+# if not Cryptocurrency.objects.all():
+#     create_cryptocurrency()
+#t
 
-while True:
-    sleep(30)
-    update_cryptocurrency()
+# while True:
+#     sleep(30)
+#     update_cryptocurrency()
