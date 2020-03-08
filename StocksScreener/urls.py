@@ -46,8 +46,8 @@ urlpatterns = [
 
     path('egx/', include('egx.urls', namespace='egx')),
 
-    # path('crypto/', include('crypto.urls', namespace='crypto')),
-    # path('forex/', include('forex.urls', namespace='forex')),
+    path('crypto/', include('crypto.urls', namespace='crypto')),
+    path('forex/', include('forex.urls', namespace='forex')),
 
 ]
 

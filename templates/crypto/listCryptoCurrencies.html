@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Cryptocurrencies{% endblock %}
+
+
+{% block card_header %}Top Crypto-currencies{% endblock card_header %}
+
+{% block row %}
+    <div class="col-md-4">
+    </div>
+
+    <div class="col-md-4" align="center">
+        {% for Currency in Cryptocurrencies %}
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#pablo">{{ Currency.cryptocurrency }}</a>
+                    </h4>
+                    <div class="card-description">
+
+                        <table border="true" style="border:chartreuse ;border-style: dotted;">
+                            <tr>
+                                <th> Price </th>
+                                <th>{{ Currency.price }}</th>
+                            </tr>
+                            <tr>
+                                <th> Market Cap </th>
+                                <th>{{ Currency.market_cap }}</th>
+                            </tr>
+{#                            <tr>#}
+{#                                <th> Change </th>#}
+{#                                <th>{{ Currency.change }}</th>#}
+{#                            </tr>#}
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}
