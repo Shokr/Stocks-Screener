@@ -609,32 +609,43 @@
     border:1px solid #ccc;
     border-collapse:collapse;
     background-color:#fff;
-    display:block;
-    overflow: auto;
-    padding:2px 3px;
-    margin-bottom: 3px;
-    font-family:Consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", monospace;
+	display: block;
+	overflow: auto;
+	padding: 2px 3px;
+	margin-bottom: 3px;
+	font-family: Consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", monospace;
 }
+
 #djDebug .djdt-stack span {
-    color: #000;
-    font-weight: bold;
+	color: #000;
+	font-weight: bold;
 }
-#djDebug .djdt-stack span.djdt-path {
-    color: #777;
-    font-weight: normal;
+
+#djDebug .djdt-stack span.djdt-path,
+#djDebug .djdt-stack pre.djdt-locals,
+#djDebug .djdt-stack pre.djdt-locals span {
+	color: #777;
+	font-weight: normal;
 }
+
 #djDebug .djdt-stack span.djdt-code {
-    font-weight: normal;
+	font-weight: normal;
+}
+
+#djDebug .djdt-stack pre.djdt-locals {
+	margin: 0 27px 27px 27px;
 }
 
 #djDebug .djdt-width-20 {
-    width: 20%;
+	width: 20%;
 }
+
 #djDebug .djdt-width-60 {
-    width: 60%;
+	width: 60%;
 }
+
 #djDebug .djdt-highlighted {
-    background-color: lightgrey;
+	background-color: lightgrey;
 }
 .djdt-hidden {
     display: none;
