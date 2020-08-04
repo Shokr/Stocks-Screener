@@ -20,21 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcb04859-4702-46df-89fd-23cb610d166d" name="Default Changelist" comment="04082020">
-      <change beforePath="$PROJECT_DIR$/.deepsource.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.deepsource.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/django.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/greetings.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Stocks-Screener.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Stocks-Screener.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StocksScreener/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StocksScreener/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.csh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.fish" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python3" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/python3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +95,9 @@
       <updated>1594398608026</updated>
       <workItem from="1594398613452" duration="918000" />
       <workItem from="1596539861577" duration="148000" />
-      <workItem from="1596541054970" duration="729000" />
+      <workItem from="1596541054970" duration="771000" />
+      <workItem from="1596541910331" duration="296000" />
+      <workItem from="1596542289053" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="04082020">
       <created>1596540002726</created>
@@ -116,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596540002726</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="04082020">
+      <created>1596541812841</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596541812841</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,29 +145,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="466" y="121" width="424" height="479" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594399534833" />
-    <state width="1324" height="173" key="GridCell.Tab.0.bottom" timestamp="1596541563992">
+    <state width="1324" height="173" key="GridCell.Tab.0.bottom" timestamp="1596541828716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1324" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596541563992" />
-    <state width="1324" height="173" key="GridCell.Tab.0.center" timestamp="1596541563991">
+    <state width="1324" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596541828716" />
+    <state width="1324" height="173" key="GridCell.Tab.0.center" timestamp="1596541828716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1324" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596541563991" />
-    <state width="1324" height="173" key="GridCell.Tab.0.left" timestamp="1596541563991">
+    <state width="1324" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596541828716" />
+    <state width="1324" height="173" key="GridCell.Tab.0.left" timestamp="1596541828715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1324" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596541563991" />
-    <state width="1324" height="173" key="GridCell.Tab.0.right" timestamp="1596541563992">
+    <state width="1324" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596541828715" />
+    <state width="1324" height="173" key="GridCell.Tab.0.right" timestamp="1596541828716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1324" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596541563992" />
+    <state width="1324" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596541828716" />
     <state x="187" y="0" key="SettingsEditor" timestamp="1596541215863">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="187" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596541215863" />
-    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1596540014481">
+    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1596541924443">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596540014481" />
+    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596541924443" />
   </component>
 </project>
