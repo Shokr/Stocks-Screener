@@ -107,7 +107,6 @@ DATABASES = {
 
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
-
 # ------------------------------------------------------------------------------
 
 # AUTHENTICATION
@@ -228,7 +227,6 @@ SECURE_BROWSER_XSS_FILTER = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#x-frame-options
 X_FRAME_OPTIONS = "DENY"
 
-
 # REST_FRAMEWORK
 # ------------------------------------------------------------------------------
 REST_FRAMEWORK = {
@@ -288,7 +286,6 @@ LOGGING = {
 #     'all_applications': True,
 #     'group_models': True,
 # }
-
 
 # Celery
 # ------------------------------------------------------------------------------
