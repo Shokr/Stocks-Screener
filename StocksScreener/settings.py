@@ -52,7 +52,7 @@ SECRET_KEY = '%lfc=emfehlt&rbm()5y#&c$_@-3b7jh=_k4nl7@d!p)==e1mi'
 
 # ------------------------------------------------------------------------------
 
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 # URLS
 # ------------------------------------------------------------------------------
@@ -215,7 +215,7 @@ TEMPLATES = [
 ]
 
 # http://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
-# CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # SECURITY
 # ------------------------------------------------------------------------------
@@ -305,7 +305,7 @@ if USE_TZ:
     # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-timezone
     CELERY_TIMEZONE = TIME_ZONE
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-broker_url
-CELERY_BROKER_URL = "amqp://localhost/"
+CELERY_BROKER_URL = os.environ['REDIS_URL']
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-result_backend
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-accept_content
