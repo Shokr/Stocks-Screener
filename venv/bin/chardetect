@@ -1,4 +1,4 @@
-#!/home/shokr/development/Stocks-Screener/venv/bin/python
+#!/home/muhammed/development/Stocks-Screener/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

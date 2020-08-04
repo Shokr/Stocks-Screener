@@ -1,4 +1,4 @@
-#!/home/shokr/development/Stocks-Screener/venv/bin/python
+#!/home/muhammed/development/Stocks-Screener/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":
