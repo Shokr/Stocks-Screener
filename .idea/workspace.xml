@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fcb04859-4702-46df-89fd-23cb610d166d" name="Default Changelist" comment="04082020">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StocksScreener/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StocksScreener/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,8 @@
       <workItem from="1596539861577" duration="148000" />
       <workItem from="1596541054970" duration="771000" />
       <workItem from="1596541910331" duration="296000" />
-      <workItem from="1596542289053" duration="318000" />
+      <workItem from="1596542289053" duration="380000" />
+      <workItem from="1596542893736" duration="479000" />
     </task>
     <task id="LOCAL-00001" summary="04082020">
       <created>1596540002726</created>
@@ -113,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596541812841</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="04082020">
+      <created>1596542630908</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596542630908</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +149,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="278" y="24" width="800" height="695" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1596540027710" />
+    <state x="127" y="54" width="1092" height="606" key="DiffContextDialog" timestamp="1596543322708">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="127" y="54" width="1092" height="606" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1596543322708" />
     <state x="466" y="121" width="424" height="479" key="FileChooserDialogImpl" timestamp="1594399534833">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -165,9 +177,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="187" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596541215863" />
-    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1596541924443">
+    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2" timestamp="1596542639679">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596541924443" />
+    <state x="278" y="99" width="800" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596542639679" />
   </component>
 </project>
