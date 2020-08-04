@@ -288,7 +288,6 @@ LOGGING = {
 # }
 
 
-
 #
 # # Celery
 # # ------------------------------------------------------------------------------
@@ -320,7 +319,6 @@ LOGGING = {
 # CELERY_TASK_ALWAYS_EAGER = True
 # # http://docs.celeryproject.org/en/latest/userguide/configuration.html#task-eager-propagates
 # CELERY_TASK_EAGER_PROPAGATES = True
-
 
 
 # # django-debug-toolbar
