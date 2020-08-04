@@ -107,7 +107,6 @@ DATABASES = {
 
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
-
 # ------------------------------------------------------------------------------
 
 # AUTHENTICATION
@@ -136,11 +135,21 @@ PASSWORD_HASHERS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+        "NAME":
+        "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+    {
+        "NAME":
+        "django.contrib.auth.password_validation.MinimumLengthValidator"
+    },
+    {
+        "NAME":
+        "django.contrib.auth.password_validation.CommonPasswordValidator"
+    },
+    {
+        "NAME":
+        "django.contrib.auth.password_validation.NumericPasswordValidator"
+    },
 ]
 
 # MIDDLEWARE
@@ -186,33 +195,31 @@ MEDIA_URL = "/media/"
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
-TEMPLATES = [
-    {
-        # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES-BACKEND
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        # https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
-        "OPTIONS": {
-            # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
-            # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
-            "loaders": [
-                "django.template.loaders.filesystem.Loader",
-                "django.template.loaders.app_directories.Loader",
-            ],
-            # https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.template.context_processors.i18n",
-                "django.template.context_processors.media",
-                "django.template.context_processors.static",
-                "django.template.context_processors.tz",
-                "django.contrib.messages.context_processors.messages",
-            ],
-        },
-    }
-]
+TEMPLATES = [{
+    # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES-BACKEND
+    "BACKEND": "django.template.backends.django.DjangoTemplates",
+    # https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
+    "DIRS": [os.path.join(BASE_DIR, "templates")],
+    "OPTIONS": {
+        # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
+        # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
+        "loaders": [
+            "django.template.loaders.filesystem.Loader",
+            "django.template.loaders.app_directories.Loader",
+        ],
+        # https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
+        "context_processors": [
+            "django.template.context_processors.debug",
+            "django.template.context_processors.request",
+            "django.contrib.auth.context_processors.auth",
+            "django.template.context_processors.i18n",
+            "django.template.context_processors.media",
+            "django.template.context_processors.static",
+            "django.template.context_processors.tz",
+            "django.contrib.messages.context_processors.messages",
+        ],
+    },
+}]
 
 # http://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -228,7 +235,6 @@ SECURE_BROWSER_XSS_FILTER = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#x-frame-options
 X_FRAME_OPTIONS = "DENY"
 
-
 # REST_FRAMEWORK
 # ------------------------------------------------------------------------------
 REST_FRAMEWORK = {
@@ -236,11 +242,12 @@ REST_FRAMEWORK = {
         "rest_framework.renderers.JSONRenderer",
         "rest_framework.renderers.BrowsableAPIRenderer",
     ),
-    "DEFAULT_PERMISSION_CLASSES": (
-        "rest_framework.permissions.DjangoModelPermissions",
-    ),
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 100,
+    "DEFAULT_PERMISSION_CLASSES":
+    ("rest_framework.permissions.DjangoModelPermissions", ),
+    "DEFAULT_PAGINATION_CLASS":
+    "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE":
+    100,
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -262,10 +269,15 @@ MANAGERS = ADMINS
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "filters": {"require_debug_true": {"()": "django.utils.log.RequireDebugTrue",}},
+    "filters": {
+        "require_debug_true": {
+            "()": "django.utils.log.RequireDebugTrue",
+        }
+    },
     "formatters": {
         "verbose": {
-            "format": "%(levelname)s %(asctime)s %(module)s "
+            "format":
+            "%(levelname)s %(asctime)s %(module)s "
             "%(process)d %(thread)d %(message)s"
         }
     },
@@ -277,8 +289,16 @@ LOGGING = {
             "formatter": "verbose",
         }
     },
-    "loggers": {"django.db.backends": {"level": "DEBUG", "handlers": ["console"],}},
-    "root": {"level": "INFO", "handlers": ["console"]},
+    "loggers": {
+        "django.db.backends": {
+            "level": "DEBUG",
+            "handlers": ["console"],
+        }
+    },
+    "root": {
+        "level": "INFO",
+        "handlers": ["console"]
+    },
 }
 
 # Django Extra
@@ -288,7 +308,6 @@ LOGGING = {
 #     'all_applications': True,
 #     'group_models': True,
 # }
-
 
 # Celery
 # ------------------------------------------------------------------------------
@@ -326,9 +345,9 @@ CELERY_TASK_EAGER_PROPAGATES = True
 # # ---------------------------------------------------------------------------------------------------
 if DEBUG:
     INTERNAL_IPS = ("127.0.0.1", "localhost", "0.0.0.0")
-    MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware",)
+    MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware", )
 
-    INSTALLED_APPS += ("debug_toolbar",)
+    INSTALLED_APPS += ("debug_toolbar", )
 
     DEBUG_TOOLBAR_PANELS = [
         "debug_toolbar.panels.versions.VersionsPanel",
