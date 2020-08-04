@@ -261,7 +261,7 @@ MANAGERS = ADMINS
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "filters": {"require_debug_true": {"()": "django.utils.log.RequireDebugTrue", }},
+    "filters": {"require_debug_true": {"()": "django.utils.log.RequireDebugTrue",}},
     "formatters": {
         "verbose": {
             "format": "%(levelname)s %(asctime)s %(module)s "
@@ -276,7 +276,7 @@ LOGGING = {
             "formatter": "verbose",
         }
     },
-    "loggers": {"django.db.backends": {"level": "DEBUG", "handlers": ["console"], }},
+    "loggers": {"django.db.backends": {"level": "DEBUG", "handlers": ["console"],}},
     "root": {"level": "INFO", "handlers": ["console"]},
 }
 
