@@ -28,24 +28,16 @@ admin.autodiscover()
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-
-    path('admin/', admin.site.urls),
-
-    path('users/', include('users.urls', namespace='users')),
-    path('users/api/v1/', include('users.api_urls', namespace='users_api')),
-
-    path('market/', include('market.urls', namespace='market')),
-    path('market/api/v1/', include('market.api_urls', namespace='market_api')),
-
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-
-    path('accounts/', include('django.contrib.auth.urls')),
-
-    path('egx/', include('egx.urls', namespace='egx')),
-
-    path('crypto/', include('crypto.urls', namespace='crypto')),
-    path('forex/', include('forex.urls', namespace='forex')),
-
+    path("admin/", admin.site.urls),
+    path("users/", include("users.urls", namespace="users")),
+    path("users/api/v1/", include("users.api_urls", namespace="users_api")),
+    path("market/", include("market.urls", namespace="market")),
+    path("market/api/v1/", include("market.api_urls", namespace="market_api")),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("egx/", include("egx.urls", namespace="egx")),
+    path("crypto/", include("crypto.urls", namespace="crypto")),
+    path("forex/", include("forex.urls", namespace="forex")),
 ]
 
 # API URLS
@@ -92,7 +84,7 @@ if settings.DEBUG:
     import debug_toolbar
 
     urlpatterns += [
-        path('__debug__/', include(debug_toolbar.urls)),
+        path("__debug__/", include(debug_toolbar.urls)),
     ]
 ######################################################################
 admin.site.site_header = "Stocks-Screener"
