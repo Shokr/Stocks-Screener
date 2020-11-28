@@ -1,5 +1,5 @@
 from time import sleep
-from urllib.request import urlopen, Request
+from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
 from celery.schedules import crontab

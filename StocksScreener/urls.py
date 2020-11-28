@@ -15,13 +15,11 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.contrib.staticfiles.urls import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.urls import path, include
+from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
+from django.urls import include, path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
-
 from schema_graph.views import Schema
 
 admin.autodiscover()
