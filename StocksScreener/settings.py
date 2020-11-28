@@ -136,11 +136,21 @@ PASSWORD_HASHERS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+        "NAME":
+        "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+    {
+        "NAME":
+        "django.contrib.auth.password_validation.MinimumLengthValidator"
+    },
+    {
+        "NAME":
+        "django.contrib.auth.password_validation.CommonPasswordValidator"
+    },
+    {
+        "NAME":
+        "django.contrib.auth.password_validation.NumericPasswordValidator"
+    },
 ]
 
 # MIDDLEWARE
@@ -185,33 +195,31 @@ MEDIA_URL = "/media/"
 # TEMPLATES
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#templates
-TEMPLATES = [
-    {
-        # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES-BACKEND
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        # https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
-        "OPTIONS": {
-            # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
-            # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
-            "loaders": [
-                "django.template.loaders.filesystem.Loader",
-                "django.template.loaders.app_directories.Loader",
-            ],
-            # https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.template.context_processors.i18n",
-                "django.template.context_processors.media",
-                "django.template.context_processors.static",
-                "django.template.context_processors.tz",
-                "django.contrib.messages.context_processors.messages",
-            ],
-        },
-    }
-]
+TEMPLATES = [{
+    # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES-BACKEND
+    "BACKEND": "django.template.backends.django.DjangoTemplates",
+    # https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
+    "DIRS": [os.path.join(BASE_DIR, "templates")],
+    "OPTIONS": {
+        # https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
+        # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
+        "loaders": [
+            "django.template.loaders.filesystem.Loader",
+            "django.template.loaders.app_directories.Loader",
+        ],
+        # https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
+        "context_processors": [
+            "django.template.context_processors.debug",
+            "django.template.context_processors.request",
+            "django.contrib.auth.context_processors.auth",
+            "django.template.context_processors.i18n",
+            "django.template.context_processors.media",
+            "django.template.context_processors.static",
+            "django.template.context_processors.tz",
+            "django.contrib.messages.context_processors.messages",
+        ],
+    },
+}]
 
 # http://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -239,10 +247,11 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": (
         # "rest_framework.permissions.DjangoModelPermissions",
-        "rest_framework.permissions.IsAuthenticated",
-    ),
-    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 100,
+        "rest_framework.permissions.IsAuthenticated", ),
+    "DEFAULT_PAGINATION_CLASS":
+    "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE":
+    100,
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -271,7 +280,8 @@ LOGGING = {
     },
     "formatters": {
         "verbose": {
-            "format": "%(levelname)s %(asctime)s %(module)s "
+            "format":
+            "%(levelname)s %(asctime)s %(module)s "
             "%(process)d %(thread)d %(message)s"
         }
     },
@@ -289,37 +299,49 @@ LOGGING = {
             "handlers": ["console"],
         }
     },
-    "root": {"level": "INFO", "handlers": ["console"]},
+    "root": {
+        "level": "INFO",
+        "handlers": ["console"]
+    },
 }
 
 # Django Extra
 # ----------------------------------------------------------------------------------------
 
-
 ################################################################################################################
 
 JAZZMIN_SETTINGS = {
     # title of the window
-    "site_title": "Stocks Screener",
+    "site_title":
+    "Stocks Screener",
     # Title on the brand, and the login screen (19 chars max)
-    "site_header": "Stocks Watcher",
+    "site_header":
+    "Stocks Watcher",
     # square logo to use for your site, must be present in static files, used for favicon and brand on top left
     # "site_logo": "",
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to Stocks Screener",
+    "welcome_sign":
+    "Welcome to Stocks Screener",
     # Copyright on the footer
-    "copyright": "Muhammed Shokr",
+    "copyright":
+    "Muhammed Shokr",
     # The model admin to search from the search bar, search bar omitted if excluded
-    "search_model": "auth.User",
+    "search_model":
+    "auth.User",
     # Field name on user model that contains avatar image
-    "user_avatar": None,
+    "user_avatar":
+    None,
     ############
     # Top Menu #
     ############
     # Links to put along the top menu
     "topmenu_links": [
         # Url that gets reversed (Permissions can be added)
-        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {
+            "name": "Home",
+            "url": "admin:index",
+            "permissions": ["auth.view_user"]
+        },
         # external url that opens in a new window (Permissions can be added)
         # {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
         # model admin to link to (Permissions checked against model)
@@ -333,15 +355,19 @@ JAZZMIN_SETTINGS = {
     # Additional links to include in the user menu on the top right ("app" url type is not allowed)
     "usermenu_links": [
         # {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
-        {"model": "auth.user"}
+        {
+            "model": "auth.user"
+        }
     ],
     #############
     # Side Menu #
     #############
     # Whether to display the side menu
-    "show_sidebar": True,
+    "show_sidebar":
+    True,
     # Whether to aut expand the menu
-    "navigation_expanded": True,
+    "navigation_expanded":
+    True,
     # Hide these apps when generating side menu e.g (auth)
     "hide_apps": [],
     # Hide these models when generating side menu (e.g auth.user)
@@ -366,21 +392,27 @@ JAZZMIN_SETTINGS = {
         "auth.Group": "fas fa-users",
     },
     # Icons that are used when one is not manually specified
-    "default_icon_parents": "fas fa-chevron-circle-right",
-    "default_icon_children": "fas fa-circle",
+    "default_icon_parents":
+    "fas fa-chevron-circle-right",
+    "default_icon_children":
+    "fas fa-circle",
     #################
     # Related Modal #
     #################
     # Use modals instead of popups
-    "related_modal_active": False,
+    "related_modal_active":
+    False,
     #############
     # UI Tweaks #
     #############
     # Relative paths to custom CSS/JS scripts (must be present in static files)
-    "custom_css": None,
-    "custom_js": None,
+    "custom_css":
+    None,
+    "custom_js":
+    None,
     # Whether to show the UI customizer on the sidebar
-    "show_ui_builder": False,
+    "show_ui_builder":
+    False,
     ###############
     # Change view #
     ###############
@@ -390,14 +422,16 @@ JAZZMIN_SETTINGS = {
     # - vertical_tabs
     # - collapsible
     # - carousel
-    "changeform_format": "horizontal_tabs",
+    "changeform_format":
+    "horizontal_tabs",
     # override change forms on a per modeladmin basis
     "changeform_format_overrides": {
         "auth.user": "collapsible",
         "auth.group": "vertical_tabs",
     },
     # Add a language dropdown into the admin
-    "language_chooser": False,
+    "language_chooser":
+    False,
 }
 
 JAZZMIN_UI_TWEAKS = {
@@ -469,9 +503,9 @@ CELERY_TASK_EAGER_PROPAGATES = True
 # # ---------------------------------------------------------------------------------------------------
 if DEBUG:
     INTERNAL_IPS = ("127.0.0.1", "localhost", "0.0.0.0")
-    MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware",)
+    MIDDLEWARE += ("debug_toolbar.middleware.DebugToolbarMiddleware", )
 
-    INSTALLED_APPS += ("debug_toolbar",)
+    INSTALLED_APPS += ("debug_toolbar", )
 
     DEBUG_TOOLBAR_PANELS = [
         "debug_toolbar.panels.versions.VersionsPanel",

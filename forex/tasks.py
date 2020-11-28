@@ -36,18 +36,16 @@ def create_currency():
         change_p = currency.find("td", class_=f"pid-{idx}-pc").text
         time = currency.find("td", class_=f"pid-{idx}-time").text
 
-        print(
-            {
-                "pair": pair,
-                "bid": bid,
-                "ask": ask,
-                "high": high,
-                "low": low,
-                "change": change,
-                "change_p": change_p,
-                "time": time,
-            }
-        )
+        print({
+            "pair": pair,
+            "bid": bid,
+            "ask": ask,
+            "high": high,
+            "low": low,
+            "change": change,
+            "change_p": change_p,
+            "time": time,
+        })
 
         # create objects in database
         Currency.objects.create(
