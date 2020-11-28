@@ -16,8 +16,7 @@ from crypto.models import Cryptocurrency
 )
 def create_cryptocurrency():
     print("Crawling data and creating objects in database ..")
-    req = Request("https://coinranking.com",
-                  headers={"User-Agent": "Mozilla/5.0"})
+    req = Request("https://coinranking.com", headers={"User-Agent": "Mozilla/5.0"})
     html = urlopen(req).read()
     bs = BeautifulSoup(html, "html.parser")
     # Find first 5 table rows
@@ -67,8 +66,7 @@ def create_cryptocurrency():
 )
 def update_cryptocurrency():
     print("Updating data ..")
-    req = Request("https://coinranking.com",
-                  headers={"User-Agent": "Mozilla/5.0"})
+    req = Request("https://coinranking.com", headers={"User-Agent": "Mozilla/5.0"})
     html = urlopen(req).read()
     bs = BeautifulSoup(html, "html.parser")
 
@@ -106,7 +104,6 @@ def update_cryptocurrency():
             "market_cap": market_cap,
             "change": change,
         }
-        Cryptocurrency.objects.filter(
-            cryptocurrency=cryptocurrency).update(**data)
+        Cryptocurrency.objects.filter(cryptocurrency=cryptocurrency).update(**data)
 
         sleep(3)
