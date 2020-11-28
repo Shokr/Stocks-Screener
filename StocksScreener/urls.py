@@ -27,16 +27,13 @@ from schema_graph.views import Schema
 admin.autodiscover()
 
 urlpatterns = [
-    path("",
-         TemplateView.as_view(template_name="pages/home.html"),
-         name="home"),
+    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path("admin/", admin.site.urls),
     path("users/", include("users.urls", namespace="users")),
     path("users/api/v1/", include("users.api_urls", namespace="users_api")),
     path("market/", include("market.urls", namespace="market")),
     path("market/api/v1/", include("market.api_urls", namespace="market_api")),
-    path("api-auth/", include("rest_framework.urls",
-                              namespace="rest_framework")),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("egx/", include("egx.urls", namespace="egx")),
     path("crypto/", include("crypto.urls", namespace="crypto")),
@@ -59,8 +56,7 @@ urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
