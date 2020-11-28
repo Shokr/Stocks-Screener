@@ -10,7 +10,7 @@ from forex.models import Currency
 
 # @shared_task
 @periodic_task(
-    run_every=(crontab(minute='*/15')),
+    run_every=(crontab(minute='*/1')),
     name="create_currency",
 )
 def create_currency():
@@ -45,7 +45,7 @@ def create_currency():
 
 # @shared_task
 @periodic_task(
-    run_every=(crontab(minute='*/15')),
+    run_every=(crontab(minute='*/1')),
     name="update_currency",
 )
 def update_currency():
@@ -71,11 +71,3 @@ def update_currency():
         Currency.objects.filter(pair=pair).update(**data)
 
         sleep(5)
-
-
-# if not Currency.objects.all():
-#     create_currency()
-#
-# while True:
-#     sleep(15)
-#     update_currency()

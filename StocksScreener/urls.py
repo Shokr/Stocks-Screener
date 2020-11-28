@@ -24,13 +24,10 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 from schema_graph.views import Schema
 
-
 admin.autodiscover()
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
-
-    path('grappelli/', include('grappelli.urls')),  # grappelli URLS
 
     path('admin/', admin.site.urls),
 
@@ -58,7 +55,6 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
 ]
-
 
 urlpatterns += [
     path("schema/", Schema.as_view()),

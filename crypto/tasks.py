@@ -57,12 +57,3 @@ def update_cryptocurrency():
         Cryptocurrency.objects.filter(cryptocurrency=cryptocurrency).update(**data)
 
         sleep(3)
-
-
-# if not Cryptocurrency.objects.all():
-#     create_cryptocurrency()
-#t
-
-# while True:
-#     sleep(30)
-#     update_cryptocurrency()
