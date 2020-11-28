@@ -65,7 +65,7 @@ humanize==3.1.0
 identify==1.5.9
 idna==2.10
 imagesize==1.2.0
-iniconfig==1.1.1
+iniconfig
 ipython==7.19.0
 ipython-genutils==0.2.0
 isort==5.6.4
