@@ -72,7 +72,7 @@ ipython-genutils
 isort
 jdcal
 jedi
-Jinja2==2.11.2
+Jinja2==2.11.3
 kombu==4.6.11
 lazy-object-proxy==1.4.3
 livereload==2.6.3
