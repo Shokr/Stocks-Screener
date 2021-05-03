@@ -103,7 +103,7 @@ pycodestyle==2.6.0
 pycparser==2.20
 pydot==1.4.1
 pyflakes==2.2.0
-Pygments==2.7.2
+Pygments==2.7.4
 PyJWT==1.7.1
 pylint==2.6.0
 pylint-celery==0.3
