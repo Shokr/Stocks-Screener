@@ -138,7 +138,7 @@ sphinxcontrib-htmlhelp==1.0.3
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.4
-sqlparse==0.4.1
+sqlparse==0.4.2
 tablib==2.0.0
 termcolor==1.1.0
 testfixtures==6.15.0
