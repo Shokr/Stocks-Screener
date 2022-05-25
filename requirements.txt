@@ -104,7 +104,7 @@ pycparser==2.20
 pydot==1.4.1
 pyflakes==2.2.0
 Pygments==2.7.4
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.6.0
 pylint-celery==0.3
 pylint-django==2.3.0
